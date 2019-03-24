@@ -9,6 +9,7 @@ const NavBar = ({ color, hoverColor }) => {
         justify-content: space-between;
         align-items: center;
         height: 100%;
+        width: max-content;
     `
 
     const NavItem = styled.a`
@@ -18,7 +19,7 @@ const NavBar = ({ color, hoverColor }) => {
         color: ${color ? color : '#641A1F'};
 
         &:hover {
-            color: ${hoverColor ? hoverColor : '#FFFFFF'};
+            color: ${hoverColor ? hoverColor : '#FEF2E9'};
         }
     `
     const NavLink = styled(Link)`
@@ -28,13 +29,13 @@ const NavBar = ({ color, hoverColor }) => {
         color: ${color ? color : '#641A1F'};
 
         &:hover {
-            color: ${hoverColor ? hoverColor : '#FFFFFF'};
+            color: ${hoverColor ? hoverColor : '#FEF2E9'};
         }
     `
     return (
         <Wrapper>
             <NavItem href="https://www.google.com">Our Story</NavItem>
-            <NavItem href="https://www.google.com">Schedule</NavItem>
+            <NavLink to="/schedule">Schedule</NavLink>
             <NavLink to="/faqs">FAQs</NavLink>
             <NavLink to="/accomodations">Accomodations</NavLink>
             <NavItem href="https://www.google.com">RSVP &#11023;</NavItem>

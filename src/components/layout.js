@@ -1,24 +1,21 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import styled from 'styled-components'
-import Nav from './Nav'
+import { ThemeProvider } from 'styled-components'
 
-const Container = styled.div`
-  max-width: 1280px;
-  margin: 0 auto;
-`
+import GlobalDictionary from '../globaldictionary'
+import GlobalStyles from '../styles/globalStyles'
+import styleTheme from '../styleTheme'
 
-class Template extends React.Component {
-  render() {
-    const { children, title, color } = this.props
-
+const Layout = ({ children }) => {
     return (
-      <Container>
-        <Nav title={title} />
-        {children}
-      </Container>
+        <ThemeProvider theme={styleTheme}>
+            <GlobalDictionary>
+                <div id="site-container">
+                    <GlobalStyles />
+                    {children}
+                </div>
+            </GlobalDictionary>
+        </ThemeProvider>
     )
-  }
 }
 
-export default Template
+export default Layout
