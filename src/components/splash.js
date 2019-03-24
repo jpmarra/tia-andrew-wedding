@@ -4,7 +4,7 @@ import get from 'lodash/get'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 
-import NavBar from './NavBar'
+import NavBar from './navbar'
 import Layout from './layout'
 import DictionaryContext from '../dictionarycontext'
 
