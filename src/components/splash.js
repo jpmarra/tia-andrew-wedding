@@ -2,6 +2,9 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import get from 'lodash/get'
 import styled from 'styled-components'
+import Img from 'gatsby-image'
+
+import NavBar from './NavBar'
 import Layout from './layout'
 
 const query = graphql`
@@ -10,6 +13,14 @@ const query = graphql`
             heroText {
                 childMarkdownRemark {
                     html
+                }
+            }
+        }
+
+        file(relativePath: { regex: "/splash-background/" }) {
+            childImageSharp {
+                fluid(maxWidth: 1000) {
+                    ...GatsbyImageSharpFluid
                 }
             }
         }
@@ -27,18 +38,34 @@ export default ({ title }) => (
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                background-color: ${props => props.theme.orange};
+                background-color: transparent;
             `
             const Title = styled.div`
                 ${props => props.theme.h1Heading};
+                height: 10%;
+                display: flex;
+                align-items: center;
+
+                p {
+                    margin: 0;
+                    color: ${props => props.theme.maroon};
+                }
             `
             const HeroText = styled.div`
                 ${props => props.theme.primaryHeading};
                 color: ${props => props.theme.white};
                 text-align: center;
+                height: 80%;
                 width: 65%;
                 display: flex;
                 justify-content: center;
+                align-items: center;
+            `
+
+            const NavContainer = styled.div`
+                height: 10%;
+                display: flex;
+                align-items: center;
             `
             const heroTextHTML = get(
                 data,
@@ -46,10 +73,24 @@ export default ({ title }) => (
             )
             return (
                 <Wrapper>
-                    <Title>{title}</Title>
+                    <Title>
+                        <p>{title}</p>
+                    </Title>
+                    <Img
+                        css={{ top: 0, left: 0, right: 0, bottom: 0 }}
+                        style={{
+                            position: `absolute`,
+                            backgroundColor: '#F3793B',
+                            zIndex: -1,
+                        }}
+                        fluid={data.file.childImageSharp.fluid}
+                    />
                     <HeroText
                         dangerouslySetInnerHTML={{ __html: heroTextHTML }}
                     />
+                    <NavContainer>
+                        <NavBar />
+                    </NavContainer>
                 </Wrapper>
             )
         }}

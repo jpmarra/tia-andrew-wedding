@@ -1,3 +1,4 @@
+const path = require('path')
 let contentfulConfig
 
 try {
@@ -30,6 +31,13 @@ module.exports = {
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-styled-components',
         'gatsby-plugin-sharp',
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `images`,
+                path: path.join(__dirname, `src`, `images`),
+            },
+        },
         {
             resolve: 'gatsby-source-contentful',
             options: contentfulConfig,
