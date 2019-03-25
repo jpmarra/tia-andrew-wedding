@@ -57,8 +57,9 @@ const Footer = () => {
             </NavWrapper>
             <Credits>
                 Website design by{' '}
-                <a href="www.andrewmcqustion.com">A. Mcquiston</a>.
-                &nbsp;Development by <a href="www.jpmarra.com">JP Marra</a>.
+                <a href="http://www.andrewmcqustion.com">A. Mcquiston</a>.
+                &nbsp;Development by{' '}
+                <a href="http://www.jpmarra.com">JP Marra</a>.
             </Credits>
         </Wrapper>
     )
