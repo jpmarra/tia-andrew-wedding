@@ -18,6 +18,60 @@ const query = graphql`
                     html
                 }
             }
+
+            stayBlurb {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            airbnbBlurb {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            travelBlurb {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            airportBlurb {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            gettingAroundBlurb {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            enjoyBlurb {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            societyHillBlurb {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            oldCityBlurb {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            fishtownBlurb {
+                childMarkdownRemark {
+                    html
+                }
+            }
         }
     }
 `
@@ -34,6 +88,42 @@ export default ({ children }) => (
                 footerTextHTML: get(
                     data,
                     'contentfulDictionary.footerText.childMarkdownRemark.html'
+                ),
+                stayBlurbHTML: get(
+                    data,
+                    'contentfulDictionary.stayBlurb.childMarkdownRemark.html'
+                ),
+                travelBlurbHTML: get(
+                    data,
+                    'contentfulDictionary.travelBlurb.childMarkdownRemark.html'
+                ),
+                enjoyBlurbHTML: get(
+                    data,
+                    'contentfulDictionary.enjoyBlurb.childMarkdownRemark.html'
+                ),
+                airbnbBlurbHTML: get(
+                    data,
+                    'contentfulDictionary.airbnbBlurb.childMarkdownRemark.html'
+                ),
+                gettingAroundBlurbHTML: get(
+                    data,
+                    'contentfulDictionary.gettingAroundBlurb.childMarkdownRemark.html'
+                ),
+                airportBlurbHTML: get(
+                    data,
+                    'contentfulDictionary.airportBlurb.childMarkdownRemark.html'
+                ),
+                societyHillBlurbHTML: get(
+                    data,
+                    'contentfulDictionary.societyHillBlurb.childMarkdownRemark.html'
+                ),
+                oldCityBlurbHTML: get(
+                    data,
+                    'contentfulDictionary.oldCityBlurb.childMarkdownRemark.html'
+                ),
+                fishtownBlurbHTML: get(
+                    data,
+                    'contentfulDictionary.fishtownBlurb.childMarkdownRemark.html'
                 ),
             }
             return (

@@ -18,4 +18,8 @@ export default createGlobalStyle`
         src: url(${fontFiles.FoundersGroteskEOT}) format('eot');
         src: url(${fontFiles.FoundersGroteskWOFF}) format('woff');
     }
+
+    body {
+        font-family: 'Founders Grotesk Medium'
+    }
 `

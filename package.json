@@ -10,6 +10,7 @@
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby-image": "^2.0.34",
     "gatsby-plugin-react-helmet": "^3.0.0",
+    "gatsby-plugin-react-svg": "^2.1.1",
     "gatsby-plugin-sharp": "^2.0.30",
     "gatsby-plugin-styled-components": "^3.0.7",
     "gatsby-plugin-web-font-loader": "^1.0.4",

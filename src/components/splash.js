@@ -20,14 +20,14 @@ const query = graphql`
     }
 `
 
-export default ({ title }) => {
+export default () => {
     const dictionary = useContext(DictionaryContext)
     return (
         <StaticQuery
             query={query}
             render={data => {
                 const Wrapper = styled.div`
-                    height: 100%;
+                    height: 100vh;
                     width: 100%;
                     min-height: max-content;
                     display: flex;
@@ -35,22 +35,11 @@ export default ({ title }) => {
                     align-items: center;
                     background-color: transparent;
                 `
-                const Title = styled.div`
-                    ${props => props.theme.h1Heading};
-                    height: 10%;
-                    display: flex;
-                    align-items: center;
-
-                    p {
-                        margin: 0;
-                        color: ${props => props.theme.maroon};
-                    }
-                `
                 const HeroText = styled.div`
                     ${props => props.theme.primaryHeading};
                     color: ${props => props.theme.cream};
                     text-align: center;
-                    height: 80%;
+                    height: 90%;
                     width: 65%;
                     display: flex;
                     justify-content: center;
@@ -68,9 +57,6 @@ export default ({ title }) => {
                 )
                 return (
                     <Wrapper>
-                        <Title>
-                            <p>{title}</p>
-                        </Title>
                         <Img
                             css={{ top: 0, left: 0, right: 0, bottom: 0 }}
                             style={{

@@ -3,6 +3,18 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 
 const NavBar = ({ color, hoverColor }) => {
+    const colors = {
+        white: `#FFFFFF`,
+        black: `#111111`,
+        cream: `#FEF2E9`,
+        orange: `#F3793B`,
+        red: `#CA4D36`,
+        maroon: `#641A1F`,
+    }
+
+    color = colors[color]
+    hoverColor = colors[hoverColor]
+
     const Wrapper = styled.div`
         display: flex;
         flex-direction: row;
@@ -34,7 +46,7 @@ const NavBar = ({ color, hoverColor }) => {
     `
     return (
         <Wrapper>
-            <NavItem href="https://www.google.com">Our Story</NavItem>
+            <NavLink to="/">Our Story</NavLink>
             <NavLink to="/schedule">Schedule</NavLink>
             <NavLink to="/faqs">FAQs</NavLink>
             <NavLink to="/accomodations">Accomodations</NavLink>
