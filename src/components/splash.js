@@ -47,9 +47,9 @@ export default () => {
                 `
 
                 const NavContainer = styled.div`
-                    height: 10%;
-                    display: flex;
-                    align-items: center;
+                    position: absolute;
+                    bottom: 0;
+                    margin-bottom: 20px;
                 `
                 const heroTextHTML = get(
                     data,

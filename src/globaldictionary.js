@@ -5,7 +5,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import DictionaryContext from './dictionarycontext'
 
 const query = graphql`
-    query dictionaryQuery {
+    query contextQuery {
         contentfulDictionary {
             heroText {
                 childMarkdownRemark {
@@ -73,6 +73,17 @@ const query = graphql`
                 }
             }
         }
+
+        allContentfulHotel {
+            edges {
+                node {
+                    name
+                    address
+                    description
+                    url
+                }
+            }
+        }
     }
 `
 
@@ -125,6 +136,7 @@ export default ({ children }) => (
                     data,
                     'contentfulDictionary.fishtownBlurb.childMarkdownRemark.html'
                 ),
+                hotels: get(data, 'allContentfulHotel.edges'),
             }
             return (
                 <DictionaryContext.Provider value={dictionary}>
