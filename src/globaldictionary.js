@@ -84,6 +84,19 @@ const query = graphql`
                 }
             }
         }
+
+        allContentfulQuestion {
+            edges {
+                node {
+                    question
+                    answer {
+                        childMarkdownRemark {
+                            html
+                        }
+                    }
+                }
+            }
+        }
     }
 `
 
@@ -137,6 +150,7 @@ export default ({ children }) => (
                     'contentfulDictionary.fishtownBlurb.childMarkdownRemark.html'
                 ),
                 hotels: get(data, 'allContentfulHotel.edges'),
+                questions: get(data, 'allContentfulQuestion.edges'),
             }
             return (
                 <DictionaryContext.Provider value={dictionary}>

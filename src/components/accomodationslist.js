@@ -75,8 +75,10 @@ export default () => {
     `
 
     const NavContainer = styled.div`
-        position: absolute;
-        bottom: 0;
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
         margin-bottom: 20px;
     `
 
@@ -160,10 +162,10 @@ export default () => {
                         }}
                     />
                 </Section>
-                <NavContainer>
-                    <NavBar color="orange" hoverColor="cream" />
-                </NavContainer>
             </SectionWrapper>
+            <NavContainer>
+                    <NavBar color="orange" hoverColor="cream" />
+            </NavContainer>
         </>
     )
 }

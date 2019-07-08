@@ -13,8 +13,10 @@ export default () => {
 
     const Wrapper = styled.div`
         width: 100%;
-        min-height: 100vh;
+        height: 100vh;
+        min-height: max-content;
         display: flex;
+        justify-content: center;
         background-color: ${props => props.theme.maroon};
     `
 

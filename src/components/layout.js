@@ -1,6 +1,7 @@
 import React from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 import { Link } from 'gatsby'
+import 'normalize.css';
 
 import GlobalDictionary from '../globaldictionary'
 import GlobalStyles from '../styles/globalStyles'
