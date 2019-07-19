@@ -18,7 +18,7 @@ export default props => {
     `
 
     const MobileMenu = styled(Menu)`
-        display: flex;
+        display: ${props.isOpen ? 'flex' : 'none'};
         flex-direction: column;
         justify-content: space-around;
         background-color: ${props => props.theme.maroon};
