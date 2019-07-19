@@ -10,13 +10,13 @@ import styleTheme from '../styleTheme'
 import BurgerButton from '../assets/Wedding-Icon-Menu.svg'
 
 const Layout = ({ children, color }) => {
-    const [isOpen, setisOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(false)
     const [isMobile, setIsMobile] = useState(
         typeof window !== 'undefined' && window.innerWidth < 920
     )
 
     const MenuButton = styled(BurgerButton)`
-        z-index: 1000;
+        z-index: 100;
         position: absolute;
         width: 26px;
         height: 20px;
@@ -43,13 +43,8 @@ const Layout = ({ children, color }) => {
             <GlobalDictionary>
                 {isMobile && (
                     <>
-                        <MenuButton onClick={() => setisOpen(true)} />
-                        <BurgerMenu
-                            onStateChange={state => setisOpen(state.isOpen)}
-                            isOpen={isOpen}
-                            pageWrapId={'site-container'}
-                            outerContainerId={'gatsby-focus-wrapper'}
-                        />
+                        <MenuButton onClick={() => setIsOpen(true)} />
+                        <BurgerMenu setIsOpen={setIsOpen} isOpen={isOpen} />
                     </>
                 )}
                 <div id="site-container">
