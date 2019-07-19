@@ -49,5 +49,6 @@ p {
 .not-supported-text {
     width: 80%;
     font-size: 45px;
+    text-align: center;
     color: #fef2e9;
 }
