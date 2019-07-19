@@ -43,7 +43,11 @@ p {
     justify-content: center;
     align-items: center;
     font-weight: bolder;
-    font-size: 45px;
     background-color: #ca4d36;
+}
+
+.not-supported-text {
+    width: 80%;
+    font-size: 45px;
     color: #fef2e9;
 }
