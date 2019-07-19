@@ -723,7 +723,7 @@
     "@babel/plugin-transform-react-jsx-self" "^7.0.0"
     "@babel/plugin-transform-react-jsx-source" "^7.0.0"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.3.1", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.5":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.5":
   version "7.5.5"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/@babel/runtime/-/runtime-7.5.5.tgz#74fba56d35efbeca444091c7850ccd494fd2f132"
   integrity sha1-dPulbTXvvspEQJHHhQzNSU/S8TI=
@@ -1522,11 +1522,6 @@ alphanum-sort@^1.0.0:
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/alphanum-sort/-/alphanum-sort-1.0.2.tgz#97a1119649b211ad33691d9f9f486a8ec9fbe0a3"
   integrity sha1-l6ERlkmyEa0zaR2fn0hqjsn74KM=
 
-amdefine@>=0.0.4:
-  version "1.0.1"
-  resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
-  integrity sha1-SlKCrBZHKek2Gbz9OtFR+BfOkfU=
-
 ansi-align@^2.0.0:
   version "2.0.0"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/ansi-align/-/ansi-align-2.0.0.tgz#c36aeccba563b89ceb556f3690f0b1d9e3547f7f"
@@ -1780,24 +1775,10 @@ assign-symbols@^1.0.0:
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/assign-symbols/-/assign-symbols-1.0.0.tgz#59667f41fadd4f20ccbc2bb96b8d4f7f78ec0367"
   integrity sha1-WWZ/QfrdTyDMvCu5a41Pf3jsA2c=
 
-ast-transform@0.0.0:
-  version "0.0.0"
-  resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/ast-transform/-/ast-transform-0.0.0.tgz#74944058887d8283e189d954600947bc98fe0062"
-  integrity sha1-dJRAWIh9goPhidlUYAlHvJj+AGI=
-  dependencies:
-    escodegen "~1.2.0"
-    esprima "~1.0.4"
-    through "~2.3.4"
-
 ast-types-flow@0.0.7, ast-types-flow@^0.0.7:
   version "0.0.7"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/ast-types-flow/-/ast-types-flow-0.0.7.tgz#f70b735c6bca1a5c9c22d982c3e39e7feba3bdad"
   integrity sha1-9wtzXGvKGlycItmCw+Oef+ujva0=
-
-ast-types@^0.7.0:
-  version "0.7.8"
-  resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/ast-types/-/ast-types-0.7.8.tgz#902d2e0d60d071bdcd46dc115e1809ed11c138a9"
-  integrity sha1-kC0uDWDQcb3NRtwRXhgJ7RHBOKk=
 
 astral-regex@^1.0.0:
   version "1.0.0"
@@ -1895,7 +1876,7 @@ babel-core@7.0.0-bridge.0:
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/babel-core/-/babel-core-7.0.0-bridge.0.tgz#95a492ddd90f9b4e9a4a1da14eb335b87b634ece"
   integrity sha1-laSS3dkPm06aSh2hTrM1uHtjTs4=
 
-babel-eslint@^10.0.2:
+babel-eslint@^10.0.1:
   version "10.0.2"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/babel-eslint/-/babel-eslint-10.0.2.tgz#182d5ac204579ff0881684b040560fdcc1558456"
   integrity sha1-GC1awgRXn/CIFoSwQFYP3MFVhFY=
@@ -1962,7 +1943,7 @@ babel-plugin-remove-graphql-queries@^2.7.2:
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-2.7.2.tgz#101c8b26567e35c217e817e892135a9a04a5a805"
   integrity sha1-EByLJlZ+NcIX6BfokhNamgSlqAU=
 
-"babel-plugin-styled-components@>= 1", babel-plugin-styled-components@^1.10.6:
+"babel-plugin-styled-components@>= 1", babel-plugin-styled-components@^1.10.0:
   version "1.10.6"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/babel-plugin-styled-components/-/babel-plugin-styled-components-1.10.6.tgz#f8782953751115faf09a9f92431436912c34006b"
   integrity sha1-+HgpU3URFfrwmp+SQxQ2kSw0AGs=
@@ -2337,13 +2318,6 @@ brorand@^1.0.1:
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/brorand/-/brorand-1.1.0.tgz#12c25efe40a45e3c323eb8675a0a0ce57b22371f"
   integrity sha1-EsJe/kCkXjwyPrhnWgoM5XsiNx8=
 
-browser-resolve@^1.8.1:
-  version "1.11.3"
-  resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/browser-resolve/-/browser-resolve-1.11.3.tgz#9b7cbb3d0f510e4cb86bdbd796124d28b5890af6"
-  integrity sha1-m3y7PQ9RDky4a9vXlhJNKLWJCvY=
-  dependencies:
-    resolve "1.1.7"
-
 browserify-aes@^1.0.0, browserify-aes@^1.0.4:
   version "1.2.0"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/browserify-aes/-/browserify-aes-1.2.0.tgz#326734642f403dabc3003209853bb70ad428ef48"
@@ -2374,15 +2348,6 @@ browserify-des@^1.0.0:
     des.js "^1.0.0"
     inherits "^2.0.1"
     safe-buffer "^5.1.2"
-
-browserify-optional@^1.0.0:
-  version "1.0.1"
-  resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/browserify-optional/-/browserify-optional-1.0.1.tgz#1e13722cfde0d85f121676c2a72ced533a018869"
-  integrity sha1-HhNyLP3g2F8SFnbCpyztUzoBiGk=
-  dependencies:
-    ast-transform "0.0.0"
-    ast-types "^0.7.0"
-    browser-resolve "^1.8.1"
 
 browserify-rsa@^4.0.0:
   version "4.0.1"
@@ -2820,11 +2785,6 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@^2.2.6:
-  version "2.2.6"
-  resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
-  integrity sha1-Q5Nb/90pHzJtrQogUwmzjQD2UM4=
-
 clean-stack@^1.0.0:
   version "1.3.0"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/clean-stack/-/clean-stack-1.3.0.tgz#9e821501ae979986c46b1d66d2d432db2fd4ae31"
@@ -3174,7 +3134,7 @@ contentful-batch-libs@^9.0.0:
     lodash "^4.0.1"
     moment "^2.18.1"
 
-contentful-import@^7.5.1:
+contentful-import@^7.4.0:
   version "7.5.1"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/contentful-import/-/contentful-import-7.5.1.tgz#06bc6635964680c41cd48c04ed092fc22eca69bc"
   integrity sha1-BrxmNZZGgMQc1IwE7Qkvwi7Kabw=
@@ -4414,17 +4374,6 @@ escape-string-regexp@1.0.5, escape-string-regexp@^1.0.2, escape-string-regexp@^1
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
   integrity sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
 
-escodegen@~1.2.0:
-  version "1.2.0"
-  resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/escodegen/-/escodegen-1.2.0.tgz#09de7967791cc958b7f89a2ddb6d23451af327e1"
-  integrity sha1-Cd55Z3kcyVi3+Jot220jRRrzJ+E=
-  dependencies:
-    esprima "~1.0.4"
-    estraverse "~1.5.0"
-    esutils "~1.0.0"
-  optionalDependencies:
-    source-map "~0.1.30"
-
 eslint-config-react-app@^3.0.0:
   version "3.0.8"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/eslint-config-react-app/-/eslint-config-react-app-3.0.8.tgz#6f606828ba30bafee7d744c41cd07a3fea8f3035"
@@ -4506,7 +4455,7 @@ eslint-plugin-jsx-a11y@^6.0.3:
     has "^1.0.3"
     jsx-ast-utils "^2.2.1"
 
-eslint-plugin-react@^7.14.2, eslint-plugin-react@^7.8.2:
+eslint-plugin-react@^7.11.1, eslint-plugin-react@^7.8.2:
   version "7.14.2"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/eslint-plugin-react/-/eslint-plugin-react-7.14.2.tgz#94c193cc77a899ac0ecbb2766fbef88685b7ecc1"
   integrity sha1-lMGTzHeomawOy7J2b774hoW37ME=
@@ -4549,7 +4498,7 @@ eslint-visitor-keys@^1.0.0:
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#3f3180fb2e291017716acb4c9d6d5b5c34a6a81d"
   integrity sha1-PzGA+y4pEBdxastMnW1bXDSmqB0=
 
-eslint@^5.16.0, eslint@^5.6.0:
+eslint@^5.6.0, eslint@^5.6.1:
   version "5.16.0"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/eslint/-/eslint-5.16.0.tgz#a1e3ac1aae4a3fbd8296fcf8f7ab7314cbb6abea"
   integrity sha1-oeOsGq5KP72Clvz496tzFMu2q+o=
@@ -4605,11 +4554,6 @@ esprima@^4.0.0:
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/esprima/-/esprima-4.0.1.tgz#13b04cdb3e6c5d19df91ab6987a8695619b0aa71"
   integrity sha1-E7BM2z5sXRnfkatph6hpVhmwqnE=
 
-esprima@~1.0.4:
-  version "1.0.4"
-  resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/esprima/-/esprima-1.0.4.tgz#9f557e08fc3b4d26ece9dd34f8fbf476b62585ad"
-  integrity sha1-n1V+CPw7TSbs6d00+Pv0drYlha0=
-
 esquery@^1.0.1:
   version "1.0.1"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/esquery/-/esquery-1.0.1.tgz#406c51658b1f5991a5f9b62b1dc25b00e3e5c708"
@@ -4629,30 +4573,15 @@ estraverse@^4.0.0, estraverse@^4.1.0, estraverse@^4.1.1:
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/estraverse/-/estraverse-4.2.0.tgz#0dee3fed31fcd469618ce7342099fc1afa0bdb13"
   integrity sha1-De4/7TH81GlhjOc0IJn8GvoL2xM=
 
-estraverse@~1.5.0:
-  version "1.5.1"
-  resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/estraverse/-/estraverse-1.5.1.tgz#867a3e8e58a9f84618afb6c2ddbcd916b7cbaf71"
-  integrity sha1-hno+jlip+EYYr7bC3bzZFrfLr3E=
-
 esutils@^2.0.0, esutils@^2.0.2:
   version "2.0.2"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/esutils/-/esutils-2.0.2.tgz#0abf4f1caa5bcb1f7a9d8acc6dea4faaa04bac9b"
   integrity sha1-Cr9PHKpbyx96nYrMbepPqqBLrJs=
 
-esutils@~1.0.0:
-  version "1.0.0"
-  resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/esutils/-/esutils-1.0.0.tgz#8151d358e20c8acc7fb745e7472c0025fe496570"
-  integrity sha1-gVHTWOIMisx/t0XnRywAJf5JZXA=
-
 etag@~1.8.1:
   version "1.8.1"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
-
-eve@~0.5.1:
-  version "0.5.4"
-  resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/eve/-/eve-0.5.4.tgz#67d080b9725291d7e389e34c26860dd97f1debaa"
-  integrity sha1-Z9CAuXJSkdfjieNMJoYN2X8d66o=
 
 event-source-polyfill@^1.0.5:
   version "1.0.7"
@@ -5394,15 +5323,6 @@ functional-red-black-tree@^1.0.1:
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
-gatsby-background-image@^0.8.0:
-  version "0.8.0"
-  resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/gatsby-background-image/-/gatsby-background-image-0.8.0.tgz#8ff725f307b4a158a0e00a7158b267324f02d158"
-  integrity sha1-j/cl8we0oVig4ApxWLJnMk8C0Vg=
-  dependencies:
-    "@babel/runtime" "^7.4.5"
-    global "^4.4.0"
-    prop-types "^15.7.2"
-
 gatsby-cli@^2.7.15:
   version "2.7.15"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/gatsby-cli/-/gatsby-cli-2.7.15.tgz#7cc40d0f22ef4a3a844e689901e560959e0bd5b9"
@@ -5456,7 +5376,7 @@ gatsby-graphiql-explorer@^0.2.3:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-gatsby-image@^2.2.6:
+gatsby-image@^2.0.34:
   version "2.2.6"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/gatsby-image/-/gatsby-image-2.2.6.tgz#669191cdd5446242b0f3982df156a4bea971c5a8"
   integrity sha1-ZpGRzdVEYkKw85gt8Vakvqlxxag=
@@ -5501,7 +5421,7 @@ gatsby-plugin-page-creator@^2.1.5:
     lodash "^4.17.14"
     micromatch "^3.1.10"
 
-gatsby-plugin-react-helmet@^3.1.2:
+gatsby-plugin-react-helmet@^3.0.0:
   version "3.1.2"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-3.1.2.tgz#cde010f708581db4afbb3014257a6cef5c062116"
   integrity sha1-zeAQ9whYHbSvuzAUJXps71wGIRY=
@@ -5515,7 +5435,7 @@ gatsby-plugin-react-svg@^2.1.1:
   dependencies:
     svg-react-loader "^0.4.4"
 
-gatsby-plugin-sharp@^2.2.8:
+gatsby-plugin-sharp@^2.0.30, gatsby-plugin-sharp@^2.2.8:
   version "2.2.8"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.2.8.tgz#5e1c391331d30c1ef38d9f4ab6e44000a2886102"
   integrity sha1-Xhw5EzHTDB7zjZ9KtuRAAKKIYQI=
@@ -5538,7 +5458,7 @@ gatsby-plugin-sharp@^2.2.8:
     sharp "^0.22.1"
     svgo "^1.2.0"
 
-gatsby-plugin-styled-components@^3.1.2:
+gatsby-plugin-styled-components@^3.0.7:
   version "3.1.2"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/gatsby-plugin-styled-components/-/gatsby-plugin-styled-components-3.1.2.tgz#1f8ab130e2fdc02fbc8b158b237e7f620d15c2a9"
   integrity sha1-H4qxMOL9wC+8ixWLI35/Yg0Vwqk=
@@ -5562,7 +5482,7 @@ gatsby-react-router-scroll@^2.1.3:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby-source-contentful@^2.1.14:
+gatsby-source-contentful@^2.0.41:
   version "2.1.14"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/gatsby-source-contentful/-/gatsby-source-contentful-2.1.14.tgz#42f97262562828cf12e483e11aa0d4a0d66e67e7"
   integrity sha1-QvlyYlYoKM8S5IPhGqDUoNZuZ+c=
@@ -5626,7 +5546,7 @@ gatsby-telemetry@^1.1.6:
     stack-utils "1.0.2"
     uuid "3.3.2"
 
-gatsby-transformer-remark@^2.6.7:
+gatsby-transformer-remark@^2.1.6:
   version "2.6.7"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/gatsby-transformer-remark/-/gatsby-transformer-remark-2.6.7.tgz#8478ca50818f9931004edb8b7fee59eb4e74fd8d"
   integrity sha1-hHjKUIGPmTEATtuLf+5Z6050/Y0=
@@ -5652,7 +5572,7 @@ gatsby-transformer-remark@^2.6.7:
     unist-util-select "^1.5.0"
     unist-util-visit "^1.3.0"
 
-gatsby-transformer-sharp@^2.2.4:
+gatsby-transformer-sharp@^2.1.17:
   version "2.2.4"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/gatsby-transformer-sharp/-/gatsby-transformer-sharp-2.2.4.tgz#b394a49422227a287f15472397f211b37c17e0f6"
   integrity sha1-s5SklCIieih/FUcjl/IRs3wX4PY=
@@ -5665,7 +5585,7 @@ gatsby-transformer-sharp@^2.2.4:
     semver "^5.6.0"
     sharp "^0.22.1"
 
-gatsby@^2.13.28:
+gatsby@^2.2.5:
   version "2.13.28"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/gatsby/-/gatsby-2.13.28.tgz#0d13fb802453666eed5d448078d7b7ddca618012"
   integrity sha1-DRP7gCRTZm7tXUSAeNe33cphgBI=
@@ -5950,7 +5870,7 @@ global-prefix@^1.0.1:
     is-windows "^1.0.1"
     which "^1.2.14"
 
-global@^4.3.0, global@^4.4.0:
+global@^4.3.0:
   version "4.4.0"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/global/-/global-4.4.0.tgz#3e7b105179006a323ed71aafca3e9c57a5cc6406"
   integrity sha1-PnsQUXkAajI+1xqvyj6cV6XMZAY=
@@ -6818,7 +6738,7 @@ inquirer@3.3.0:
     strip-ansi "^4.0.0"
     through "^2.3.6"
 
-inquirer@^6.2.0, inquirer@^6.2.2, inquirer@^6.5.0:
+inquirer@^6.2.0, inquirer@^6.2.2:
   version "6.5.0"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/inquirer/-/inquirer-6.5.0.tgz#2303317efc9a4ea7ec2e2df6f86569b734accf42"
   integrity sha1-IwMxfvyaTqfsLi32+GVptzSsz0I=
@@ -7904,7 +7824,7 @@ lodash.uniq@^4.5.0:
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
-lodash@^4.0.0, lodash@^4.0.1, lodash@^4.11.1, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0:
+lodash@^4.0.0, lodash@^4.0.1, lodash@^4.11.1, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0:
   version "4.17.15"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha1-tEf2ZwoEVbv+7dETku/zMOoJdUg=
@@ -8736,11 +8656,6 @@ normalize-url@^3.0.0, normalize-url@^3.3.0:
   version "3.3.0"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/normalize-url/-/normalize-url-3.3.0.tgz#b2e1c4dc4f7c6d57743df733a4f5978d18650559"
   integrity sha1-suHE3E98bVd0PfczpPWXjRhlBVk=
-
-normalize.css@^8.0.1:
-  version "8.0.1"
-  resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/normalize.css/-/normalize.css-8.0.1.tgz#9b98a208738b9cc2634caacbc42d131c97487bf3"
-  integrity sha1-m5iiCHOLnMJjTKrLxC0THJdIe/M=
 
 npm-bundled@^1.0.1:
   version "1.0.6"
@@ -9945,7 +9860,7 @@ prepend-http@^2.0.0:
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/prepend-http/-/prepend-http-2.0.0.tgz#e92434bfa5ea8c19f41cdfd401d741a3c819d897"
   integrity sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=
 
-prettier@^1.18.2:
+prettier@^1.14.3:
   version "1.18.2"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/prettier/-/prettier-1.18.2.tgz#6823e7c5900017b4bd3acf46fe9ac4b4d7bda9ea"
   integrity sha1-aCPnxZAAF7S9Os9G/prEtNe9qeo=
@@ -10020,7 +9935,7 @@ prompts@^2.1.0:
     kleur "^3.0.2"
     sisteransi "^1.0.0"
 
-prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.8, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha1-UsQedbjIfnK52TYOAga5ncv/psU=
@@ -10246,17 +10161,6 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-burger-menu@^2.6.10:
-  version "2.6.10"
-  resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/react-burger-menu/-/react-burger-menu-2.6.10.tgz#29bebd0f81f7aa3da9c2395038b0139a95908388"
-  integrity sha1-Kb69D4H3qj2pwjlQOLATmpWQg4g=
-  dependencies:
-    browserify-optional "^1.0.0"
-    classnames "^2.2.6"
-    eve "~0.5.1"
-    prop-types "^15.7.2"
-    snapsvg-cjs "0.0.6"
-
 react-dev-utils@^4.2.3:
   version "4.2.3"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/react-dev-utils/-/react-dev-utils-4.2.3.tgz#5b42d9ea58d5e9e017a2f57a40a8af408a3a46fb"
@@ -10281,7 +10185,7 @@ react-dev-utils@^4.2.3:
     strip-ansi "3.0.1"
     text-table "0.2.0"
 
-react-dom@^16.8.6:
+react-dom@^16.8.5:
   version "16.8.6"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/react-dom/-/react-dom-16.8.6.tgz#71d6303f631e8b0097f56165ef608f051ff6e10f"
   integrity sha1-cdYwP2MeiwCX9WFl72CPBR/24Q8=
@@ -10301,7 +10205,7 @@ react-fast-compare@^2.0.2:
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/react-fast-compare/-/react-fast-compare-2.0.4.tgz#e84b4d455b0fec113e0402c329352715196f81f9"
   integrity sha1-6EtNRVsP7BE+BALDKTUnFRlvgfk=
 
-react-helmet@^5.2.1:
+react-helmet@^5.2.0:
   version "5.2.1"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/react-helmet/-/react-helmet-5.2.1.tgz#16a7192fdd09951f8e0fe22ffccbf9bb3e591ffa"
   integrity sha1-FqcZL90JlR+OD+Iv/Mv5uz5ZH/o=
@@ -10353,15 +10257,7 @@ react-side-effect@^1.1.0:
     exenv "^1.2.1"
     shallowequal "^1.0.1"
 
-react-spring@^8.0.27:
-  version "8.0.27"
-  resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/react-spring/-/react-spring-8.0.27.tgz#97d4dee677f41e0b2adcb696f3839680a3aa356a"
-  integrity sha1-l9Te5nf0Hgsq3LaW84OWgKOqNWo=
-  dependencies:
-    "@babel/runtime" "^7.3.1"
-    prop-types "^15.5.8"
-
-react@^16.8.4, react@^16.8.6:
+react@^16.8.4, react@^16.8.5:
   version "16.8.6"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/react/-/react-16.8.6.tgz#ad6c3a9614fd3a4e9ef51117f54d888da01f2bbe"
   integrity sha1-rWw6lhT9Ok6e9REX9U2IjaAfK74=
@@ -10789,11 +10685,6 @@ resolve-url@^0.2.1:
   version "0.2.1"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/resolve-url/-/resolve-url-0.2.1.tgz#2c637fe77c893afd2a663fe21aa9080068e2052a"
   integrity sha1-LGN/53yJOv0qZj/iGqkIAGjiBSo=
-
-resolve@1.1.7:
-  version "1.1.7"
-  resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/resolve/-/resolve-1.1.7.tgz#203114d82ad2c5ed9e8e0411b3932875e889e97b"
-  integrity sha1-IDEU2CrSxe2ejgQRs5ModeiJ6Xs=
 
 resolve@^1.10.0, resolve@^1.10.1, resolve@^1.11.0, resolve@^1.3.2, resolve@^1.5.0, resolve@^1.8.1:
   version "1.11.1"
@@ -11294,20 +11185,6 @@ snapdragon@^0.8.1:
     source-map-resolve "^0.5.0"
     use "^3.1.0"
 
-snapsvg-cjs@0.0.6:
-  version "0.0.6"
-  resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/snapsvg-cjs/-/snapsvg-cjs-0.0.6.tgz#3b2f56af2573d3d364c3ed5bf8885745f4d2dde1"
-  integrity sha1-Oy9WryVz09Nkw+1b+IhXRfTS3eE=
-  dependencies:
-    snapsvg "0.5.1"
-
-snapsvg@0.5.1:
-  version "0.5.1"
-  resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/snapsvg/-/snapsvg-0.5.1.tgz#0caf52c79189a290746fc446cc5e863f6bdddfe3"
-  integrity sha1-DK9Sx5GJopB0b8RGzF6GP2vd3+M=
-  dependencies:
-    eve "~0.5.1"
-
 socket.io-adapter@~1.1.0:
   version "1.1.1"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/socket.io-adapter/-/socket.io-adapter-1.1.1.tgz#2a805e8a14d6372124dd9159ad4502f8cb07f06b"
@@ -11450,13 +11327,6 @@ source-map@^0.7.3:
   version "0.7.3"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/source-map/-/source-map-0.7.3.tgz#5302f8169031735226544092e64981f751750383"
   integrity sha1-UwL4FpAxc1ImVECS5kmB91F1A4M=
-
-source-map@~0.1.30:
-  version "0.1.43"
-  resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/source-map/-/source-map-0.1.43.tgz#c24bc146ca517c1471f5dacbe2571b2b7f9e3346"
-  integrity sha1-wkvBRspRfBRx9drL4lcbK3+eM0Y=
-  dependencies:
-    amdefine ">=0.0.4"
 
 space-separated-tokens@^1.0.0:
   version "1.1.4"
@@ -11827,7 +11697,7 @@ style-to-object@^0.2.1:
   dependencies:
     inline-style-parser "0.1.1"
 
-styled-components@^4.3.2:
+styled-components@^4.2.0:
   version "4.3.2"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/styled-components/-/styled-components-4.3.2.tgz#4ca81918c812d3006f60ac5fdec7d6b64a9509cc"
   integrity sha1-TKgZGMgS0wBvYKxf3sfWtkqVCcw=
@@ -12053,7 +11923,7 @@ through2@^2.0.0, through2@^2.0.1:
     readable-stream "~2.3.6"
     xtend "~4.0.1"
 
-through@^2.3.6, through@^2.3.8, through@~2.3.4:
+through@^2.3.6, through@^2.3.8:
   version "2.3.8"
   resolved "https://artifacts.mlbinfra.net:443/artifactory/api/npm/web-npm/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
   integrity sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU=
