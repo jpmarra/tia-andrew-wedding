@@ -141,7 +141,7 @@ export default ({ children }) => (
         query={query}
         render={data => {
             const [isMobile, setIsMobile] = useState(
-                typeof window !== 'undefined' && window.innerWidth < 920
+                typeof window !== 'undefined' ? true : window.innerWidth < 920
             )
 
             useEffect(() => {
