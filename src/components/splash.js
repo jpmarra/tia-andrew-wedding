@@ -36,7 +36,7 @@ export default () => {
                     background-color: transparent;
 
                     @media (max-width: 920px) {
-                        height: calc(100vh - 114px);
+                        height: calc(100vh - 110px);
                     }
                 `
                 const HeroText = styled.div`
@@ -50,7 +50,7 @@ export default () => {
                     align-items: center;
 
                     @media (max-width: 920px) {
-                        font-size: 55px;
+                        font-size: 45px;
                     }
                 `
 
