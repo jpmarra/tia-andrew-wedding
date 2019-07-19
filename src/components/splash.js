@@ -28,7 +28,9 @@ export default () => {
             render={data => {
                 const Wrapper = styled.div`
                     width: 100%;
-                    height: ${window.innerHeight}px;
+                    height: ${typeof window !== 'undefined'
+                        ? window.innerHeight + 'px'
+                        : '100vh'};
                     display: flex;
                     flex-direction: column;
                     align-items: center;
