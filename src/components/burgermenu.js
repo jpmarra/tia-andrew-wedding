@@ -19,7 +19,7 @@ export default props => {
     `
     const MenuWrapper = styled.div`
         z-index: 1000;
-        display: ${props.isOpen ? 'flex' : 'none'};
+        display: flex;
         position: fixed;
         align-items: center;
         top: 0;
@@ -52,30 +52,45 @@ export default props => {
         margin-top: 40px;
     `
     return (
-        <MenuWrapper>
-            <MobileMenu>
-                <CloseButton onClick={() => props.setIsOpen(false)} />
-                <NavLink to="/story" onClick={() => props.setIsOpen(false)}>
-                    Our Story
-                </NavLink>
-                <NavLink to="/schedule" onClick={() => props.setIsOpen(false)}>
-                    Schedule
-                </NavLink>
-                <NavLink to="/faqs" onClick={() => props.setIsOpen(false)}>
-                    FAQs
-                </NavLink>
-                <NavLink
-                    to="/accommodations"
-                    onClick={() => props.setIsOpen(false)}
-                >
-                    Accommodations
-                </NavLink>
-                <NavLink href="https://www.google.com">RSVP</NavLink>
-                <NavLink href="https://www.google.com">Registry</NavLink>
-                <StarWrapper>
-                    <Star />
-                </StarWrapper>
-            </MobileMenu>
-        </MenuWrapper>
+        <>
+            {props.isOpen && (
+                <MenuWrapper>
+                    <MobileMenu>
+                        <CloseButton onClick={() => props.setIsOpen(false)} />
+                        <NavLink
+                            to="/story"
+                            onClick={() => props.setIsOpen(false)}
+                        >
+                            Our Story
+                        </NavLink>
+                        <NavLink
+                            to="/schedule"
+                            onClick={() => props.setIsOpen(false)}
+                        >
+                            Schedule
+                        </NavLink>
+                        <NavLink
+                            to="/faqs"
+                            onClick={() => props.setIsOpen(false)}
+                        >
+                            FAQs
+                        </NavLink>
+                        <NavLink
+                            to="/accommodations"
+                            onClick={() => props.setIsOpen(false)}
+                        >
+                            Accommodations
+                        </NavLink>
+                        <NavLink href="https://www.google.com">RSVP</NavLink>
+                        <NavLink href="https://www.google.com">
+                            Registry
+                        </NavLink>
+                        <StarWrapper>
+                            <Star />
+                        </StarWrapper>
+                    </MobileMenu>
+                </MenuWrapper>
+            )}
+        </>
     )
 }
