@@ -14,7 +14,7 @@ export const onInitialClientRender = () => {
             )
             supportDiv.appendChild(text)
             supportDiv.classList.add('not-supported')
-            gatsbyEl.innerHTML(supportDiv)
+            gatsbyEl.innerHTML = supportDiv
         }
     }
 }
