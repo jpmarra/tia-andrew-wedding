@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import get from 'lodash/get'
 import styled from 'styled-components'
@@ -22,15 +22,20 @@ const query = graphql`
 
 export default () => {
     const dictionary = useContext(DictionaryContext)
+    const [appHeight, setAppHeight] = useState('100vh')
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            setAppHeight(`${window.innerHeight}px`)
+        }
+    }, [])
     return (
         <StaticQuery
             query={query}
             render={data => {
                 const Wrapper = styled.div`
                     width: 100%;
-                    height: ${typeof window !== 'undefined'
-                        ? window.innerHeight + 'px'
-                        : '100vh'};
+                    height: ${appHeight};
                     display: flex;
                     flex-direction: column;
                     align-items: center;
