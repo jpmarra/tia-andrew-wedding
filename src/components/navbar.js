@@ -20,6 +20,11 @@ const NavBar = ({ color, hoverColor }) => {
         flex-direction: row;
         justify-content: space-between;
         width: max-content;
+
+        @media (max-width: 920px) {
+            flex-direction: column;
+            text-align: center;
+        }
     `
 
     const NavItem = styled.a`
@@ -44,10 +49,10 @@ const NavBar = ({ color, hoverColor }) => {
     `
     return (
         <Wrapper>
-            <NavLink to="/">Our Story</NavLink>
+            <NavLink to="/story">Our Story</NavLink>
             <NavLink to="/schedule">Schedule</NavLink>
             <NavLink to="/faqs">FAQs</NavLink>
-            <NavLink to="/accomodations">Accomodations</NavLink>
+            <NavLink to="/accommodations">Accommodations</NavLink>
             <NavItem href="https://www.google.com">RSVP &#11023;</NavItem>
             <NavItem href="https://www.google.com">Registry &#11023;</NavItem>
         </Wrapper>

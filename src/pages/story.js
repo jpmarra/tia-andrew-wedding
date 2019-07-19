@@ -1,28 +1,26 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
-
 import Layout from '../components/layout'
 import Container from '../components/container'
-import DictionaryContext from '../dictionarycontext'
+import Header from '../components/header'
 
-import AccomodationsList from '../components/accomodationslist'
+import QuestionList from '../components/questionlist'
 import Footer from '../components/footer'
-
+import StoryContent from '../components/storycontent'
 export default () => {
-    const dictionary = useContext(DictionaryContext)
-
     const Wrapper = styled.div`
         width: 100%;
-        min-height: 100vh;
+        min-height: calc(100vh - 141px);
         display: flex;
-        background-color: ${props => props.theme.maroon};
+        justify-content: center;
+        background-color: ${props => props.theme.cream};
     `
-
     return (
-        <Layout color="orange">
+        <Layout>
+            <Header />
             <Wrapper>
                 <Container class="center">
-                    <AccomodationsList />
+                    <StoryContent />
                 </Container>
             </Wrapper>
             <Footer />
