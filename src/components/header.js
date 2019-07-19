@@ -4,7 +4,6 @@ import Img from 'gatsby-image'
 import BackgroundImage from 'gatsby-background-image'
 import { graphql, Link, StaticQuery } from 'gatsby'
 import NavBar from './navbar'
-import BurgerMenu from './burgermenu'
 import DictionaryContext from '../dictionarycontext'
 
 const query = graphql`

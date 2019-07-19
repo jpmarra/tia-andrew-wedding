@@ -4,32 +4,31 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import Star from '../assets/star-icon.svg'
 
-const NavLink = styled(Link)`
-    ${props => props.theme.h1Heading}
-    text-decoration: none;
-    text-align: center;
-    margin: 40px 0;
-    color: ${props => props.theme.cream};
-
-    @media (max-width: 920px) {
-        font-size: 30px;
-    }
-`
-
-const MobileMenu = styled(Menu)`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    background-color: ${props => props.theme.maroon};
-`
-
-const StarWrapper = styled.div`
-    width: 100%;
-    display: flex !important;
-    justify-content: center;
-`
-
 export default props => {
+    const NavLink = styled(Link)`
+        ${props => props.theme.h1Heading}
+        text-decoration: none;
+        text-align: center;
+        margin: 40px 0;
+        color: ${props => props.theme.cream};
+
+        @media (max-width: 920px) {
+            font-size: 30px;
+        }
+    `
+
+    const MobileMenu = styled(Menu)`
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: ${props => props.theme.maroon};
+    `
+
+    const StarWrapper = styled.div`
+        width: 100%;
+        display: flex !important;
+        justify-content: center;
+    `
     return (
         <MobileMenu {...props} right>
             <NavLink to="/">Home</NavLink>
