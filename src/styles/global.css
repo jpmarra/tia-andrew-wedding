@@ -33,6 +33,7 @@ p {
 }
 
 .not-supported {
+    z-index: 1000;
     height: 100vh;
     width: 100vw;
     display: flex;
