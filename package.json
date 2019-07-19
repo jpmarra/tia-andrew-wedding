@@ -6,7 +6,7 @@
     "bugs": {
         "url": "https://github.com/contentful-userland/gatsby-contentful-starter/issues"
     },
-    "browserlist": [
+    "browserslist": [
         "not IE all"
     ],
     "dependencies": {
