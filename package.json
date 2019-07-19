@@ -6,6 +6,9 @@
     "bugs": {
         "url": "https://github.com/contentful-userland/gatsby-contentful-starter/issues"
     },
+    "browserlist": [
+        "not IE all"
+    ],
     "dependencies": {
         "babel-plugin-styled-components": "^1.10.0",
         "gatsby-background-image": "^0.8.0",
