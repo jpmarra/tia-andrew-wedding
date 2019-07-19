@@ -11,7 +11,7 @@ export default ({ children, isTitle = false, isQuestions = false }) => {
         if (typeof window !== undefined) {
             dictionary.setIsMobile(window.innerWidth < 920)
         }
-    }, [])
+    }, [dictionary.isMobile])
     const ContentBlock = styled.div`
         width: 100%;
         display: flex;
