@@ -6,7 +6,6 @@ import QuestionComponent from './question'
 
 const questions = () => {
     const dictionary = useContext(DictionaryContext)
-    console.log(dictionary)
 
     const StyledQuestions = styled.div`
         display: flex;
@@ -17,12 +16,16 @@ const questions = () => {
 
     return (
         <StyledQuestions>
-            {dictionary.questions.map(edge => (
-                <QuestionComponent
-                    question={edge.node.question}
-                    answer={edge.node.answer}
-                />
-            ))}
+            {dictionary.questions.map((edge, idx) => {
+                const isOpen = idx === 0
+                return (
+                    <QuestionComponent
+                        isOpen={isOpen}
+                        question={edge.node.question}
+                        answer={edge.node.answer}
+                    />
+                )
+            })}
         </StyledQuestions>
     )
 }

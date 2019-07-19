@@ -27,12 +27,12 @@ export default () => {
             query={query}
             render={data => {
                 const Wrapper = styled.div`
-                    height: 100vh;
                     width: 100%;
-                    min-height: max-content;
+                    height: ${window.innerHeight}px;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                    justify-content: center;
                     background-color: transparent;
                 `
                 const HeroText = styled.div`
@@ -44,12 +44,29 @@ export default () => {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+
+                    @media (max-width: 920px) {
+                        font-size: 55px;
+                    }
                 `
 
                 const NavContainer = styled.div`
                     position: absolute;
                     bottom: 0;
                     margin-bottom: 20px;
+                `
+
+                const Title = styled.div`
+                    ${props => props.theme.h1Heading};
+                    position: absolute;
+                    width: 250px;
+                    left: 50%;
+                    top: 25px;
+                    margin-left: -125px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: ${props => props.theme.maroon};
                 `
                 const heroTextHTML = get(
                     data,
@@ -58,7 +75,12 @@ export default () => {
                 return (
                     <Wrapper>
                         <Img
-                            css={{ top: 0, left: 0, right: 0, bottom: 0 }}
+                            css={{
+                                top: 0,
+                                left: 0,
+                                right: 0,
+                                bottom: 0,
+                            }}
                             style={{
                                 position: `absolute`,
                                 backgroundColor: '#F3793B',
@@ -66,14 +88,17 @@ export default () => {
                             }}
                             fluid={data.file.childImageSharp.fluid}
                         />
+                        <Title>Tia + Andrew</Title>
                         <HeroText
                             dangerouslySetInnerHTML={{
                                 __html: dictionary.heroTextHTML,
                             }}
                         />
-                        <NavContainer>
-                            <NavBar />
-                        </NavContainer>
+                        {!dictionary.isMobile && (
+                            <NavContainer>
+                                <NavBar />
+                            </NavContainer>
+                        )}
                     </Wrapper>
                 )
             }}

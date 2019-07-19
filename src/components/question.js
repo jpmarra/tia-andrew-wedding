@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { useSpring, animated } from 'react-spring'
 import styled from 'styled-components'
 
-const questionComponent = ({ question, answer }) => {
-    const [open, setOpen] = useState(false)
+const questionComponent = ({ question, answer, isOpen = false }) => {
+    const [open, setOpen] = useState(isOpen)
     const props = useSpring({
         from: { top: '0%' },
         to: { top: '50%' },
@@ -12,7 +12,7 @@ const questionComponent = ({ question, answer }) => {
     const StyledQuestion = styled.div`
         display: flex;
         flex-flow: column;
-        padding: 1rem 0;
+        padding: 20px 0;
         border-bottom: 1px solid;
         color: ${props => props.theme.maroon};
 
@@ -34,7 +34,7 @@ const questionComponent = ({ question, answer }) => {
                 <span>{question}</span>
                 <span>
                     <button className="expand" onClick={() => setOpen(!open)}>
-                        {open ? 'X' : '+'}
+                        {open ? '━' : '╋'}
                     </button>
                 </span>
             </div>
