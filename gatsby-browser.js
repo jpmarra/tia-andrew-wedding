@@ -8,6 +8,7 @@ export const onInitialClientRender = () => {
     if (browser) {
         if (browser.name === 'ie') {
             const gatsbyEl = document.getElementById('site-container')
+            console.log('element: ', gatsbyEl)
             gatsbyEl.innerHTML =
                 '<div class="not-supported"><div>This browser is not supported. Please visit this website in a modern browser for the best experience.<div></div>'
         }
