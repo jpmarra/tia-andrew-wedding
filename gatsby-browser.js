@@ -6,8 +6,9 @@ export const onClientEntry = () => {
 
     // handle the case where we don't detect the browser
     if (browser) {
-        console.log(browser.name)
-        console.log(browser.version)
-        console.log(browser.os)
+        if (browser.name === ie) {
+            const gatsbyEl = document.getElementById('__gatsby')
+            gatsbyEl.innerHTML = 'Browser is not supported'
+        }
     }
 }
