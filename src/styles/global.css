@@ -1,3 +1,36 @@
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
 body {
     margin: 0;
+}
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+.bm-burger-button {
+    position: absolute;
+    width: 26px;
+    height: 20px;
+    right: 26px;
+    top: 20px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+    background: #641a1f;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+    background: #fef2e9;
 }

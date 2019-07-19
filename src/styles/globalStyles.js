@@ -19,7 +19,15 @@ export default createGlobalStyle`
         src: url(${fontFiles.FoundersGroteskWOFF}) format('woff');
     }
 
+        @font-face {
+        font-family: 'Founders Grotesk Regular';
+        font-style: normal;
+        font-weight: 300;
+        src: url(${fontFiles.FoundersGroteskRegEOT}) format('eot');
+        src: url(${fontFiles.FoundersGroteskRegWOFF}) format('woff');
+    }
+
     body {
-        font-family: 'Founders Grotesk Medium'
+        font-family: 'Founders Grotesk Regular'
     }
 `

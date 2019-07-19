@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import get from 'lodash/get'
 import { StaticQuery, graphql } from 'gatsby'
 
@@ -72,6 +72,42 @@ const query = graphql`
                     html
                 }
             }
+
+            ceremonyBlurb {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            afterpartyBlurb {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            accommodationsHeader {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            storyHeader {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            scheduleHeader {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            faqHeader {
+                childMarkdownRemark {
+                    html
+                }
+            }
         }
 
         allContentfulHotel {
@@ -84,6 +120,19 @@ const query = graphql`
                 }
             }
         }
+
+        allContentfulQuestion {
+            edges {
+                node {
+                    question
+                    answer {
+                        childMarkdownRemark {
+                            html
+                        }
+                    }
+                }
+            }
+        }
     }
 `
 
@@ -91,7 +140,22 @@ export default ({ children }) => (
     <StaticQuery
         query={query}
         render={data => {
+            const [isMobile, setIsMobile] = useState(window.innerWidth < 920)
+
+            useEffect(() => {
+                window.addEventListener('resize', updateDimensions)
+                return () =>
+                    window.removeEventListener('resize', updateDimensions)
+            })
+            const updateDimensions = () => {
+                if (window.innerWidth < 920) {
+                    setIsMobile(true)
+                } else {
+                    setIsMobile(false)
+                }
+            }
             const dictionary = {
+                isMobile,
                 heroTextHTML: get(
                     data,
                     'contentfulDictionary.heroText.childMarkdownRemark.html'
@@ -136,7 +200,32 @@ export default ({ children }) => (
                     data,
                     'contentfulDictionary.fishtownBlurb.childMarkdownRemark.html'
                 ),
+                storyHeaderHTML: get(
+                    data,
+                    'contentfulDictionary.storyHeader.childMarkdownRemark.html'
+                ),
+                accommodationsHeaderHTML: get(
+                    data,
+                    'contentfulDictionary.accommodationsHeader.childMarkdownRemark.html'
+                ),
+                scheduleHeaderHTML: get(
+                    data,
+                    'contentfulDictionary.scheduleHeader.childMarkdownRemark.html'
+                ),
+                faqHeaderHTML: get(
+                    data,
+                    'contentfulDictionary.faqHeader.childMarkdownRemark.html'
+                ),
+                ceremonyBlurbHTML: get(
+                    data,
+                    'contentfulDictionary.ceremonyBlurb.childMarkdownRemark.html'
+                ),
+                afterpartyBlurbHTML: get(
+                    data,
+                    'contentfulDictionary.afterpartyBlurb.childMarkdownRemark.html'
+                ),
                 hotels: get(data, 'allContentfulHotel.edges'),
+                questions: get(data, 'allContentfulQuestion.edges'),
             }
             return (
                 <DictionaryContext.Provider value={dictionary}>

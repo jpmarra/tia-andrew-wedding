@@ -1,59 +1,61 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
-
+import ContentBlock from './contentblock.js'
 import DictionaryContext from '../dictionarycontext'
-import Star from '../assets/star-icon.svg'
-import NavBar from '../components/navbar'
 
 export default () => {
     const dictionary = useContext(DictionaryContext)
 
     const PageTitle = styled.div`
         ${props => props.theme.h2Heading}
-        margin-top: 8%;
-        margin-bottom: 20px;
+        color: ${props => props.theme.maroon};
+        margin-bottom: 10px;
+    `
+
+    const PageHeader = styled.div`
+        ${props => props.theme.h1Heading}
         color: ${props => props.theme.orange};
-        display: flex;
-        align-items: center;
+
+        @media (max-width: 920px) {
+            ${props => props.theme.mobileHeading}
+        }
     `
 
     const SectionWrapper = styled.div`
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
-        color: ${props => props.theme.cream};
+        color: ${props => props.theme.maroon};
 
         p {
             margin: 0;
         }
     `
 
-    const Section = styled.div`
-        width: 33%;
-        &.right {
-            padding-right: 30px;
-        }
-        &.middle {
-            padding: 0 30px;
-            border-left: 0.5px solid;
-            border-right: 0.5px solid;
-            border-color: ${props => props.theme.orange};
-        }
-        &.left {
-            padding-left: 30px;
-        }
-    `
-
     const SectionTitle = styled.div`
         ${props => props.theme.h1Heading}
-        color: ${props => props.theme.orange};
+        margin-bottom: 20px;
+        color: ${props => props.theme.maroon};
+    `
+
+    const SectionBlurb = styled.div`
+        margin-bottom: 30px;
     `
 
     const ItemTitle = styled.div`
         ${props => props.theme.h3Heading}
-        color: ${props => props.theme.orange};
+        color: ${props => props.theme.maroon};
         margin-top: 10px;
-        margin-bottom: 5px;
+    `
+
+    const HotelList = styled.div`
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+
+        @media (max-width: 920px) {
+            flex-direction: column;
+        }
     `
 
     const Hotel = styled.div`
@@ -62,7 +64,6 @@ export default () => {
 
     const HotelTitle = styled.div`
         ${props => props.theme.h3Heading}
-        margin-bottom: 3px;
     `
 
     const HotelLink = styled.a`
@@ -70,53 +71,24 @@ export default () => {
         color: ${props => props.theme.orange};
 
         &:hover {
-            color: ${props => props.theme.red};
+            text-decoration: underline;
         }
-    `
-
-    const NavContainer = styled.div`
-        position: absolute;
-        bottom: 0;
-        margin-bottom: 20px;
     `
 
     return (
         <>
-            <PageTitle>
-                <Star />
-                <div style={{ margin: `10px 0 0 15px` }}>Accomodations</div>
-            </PageTitle>
+            <ContentBlock isTitle>
+                <PageTitle>Accommodations</PageTitle>
+                <PageHeader
+                    dangerouslySetInnerHTML={{
+                        __html: dictionary.accommodationsHeaderHTML,
+                    }}
+                />
+            </ContentBlock>
             <SectionWrapper>
-                <Section className="right">
-                    <SectionTitle>Stay</SectionTitle>
-                    <div
-                        dangerouslySetInnerHTML={{
-                            __html: dictionary.stayBlurbHTML,
-                        }}
-                    />
-                    <ItemTitle>Hotels</ItemTitle>
-                    {dictionary.hotels.map(hotel => {
-                        const { name, address, description, url } = hotel.node
-
-                        return (
-                            <Hotel>
-                                <HotelTitle>{name}</HotelTitle>
-                                <div>{address}</div>
-                                <div>{description}</div>
-                                <HotelLink href={url}>Book &#11023;</HotelLink>
-                            </Hotel>
-                        )
-                    })}
-                    <ItemTitle>Airbnb</ItemTitle>
-                    <div
-                        dangerouslySetInnerHTML={{
-                            __html: dictionary.airbnbBlurbHTML,
-                        }}
-                    />
-                </Section>
-                <Section className="middle">
-                    <SectionTitle>Travel</SectionTitle>
-                    <div
+                <ContentBlock>
+                    <SectionTitle>Getting Around</SectionTitle>
+                    <SectionBlurb
                         dangerouslySetInnerHTML={{
                             __html: dictionary.travelBlurbHTML,
                         }}
@@ -133,10 +105,10 @@ export default () => {
                             __html: dictionary.gettingAroundBlurbHTML,
                         }}
                     />
-                </Section>
-                <Section className="left">
-                    <SectionTitle>Enjoy</SectionTitle>
-                    <div
+                </ContentBlock>
+                <ContentBlock>
+                    <SectionTitle>Things To Do</SectionTitle>
+                    <SectionBlurb
                         dangerouslySetInnerHTML={{
                             __html: dictionary.enjoyBlurbHTML,
                         }}
@@ -159,10 +131,43 @@ export default () => {
                             __html: dictionary.fishtownBlurbHTML,
                         }}
                     />
-                </Section>
-                <NavContainer>
-                    <NavBar color="orange" hoverColor="cream" />
-                </NavContainer>
+                </ContentBlock>
+                <ContentBlock>
+                    <SectionTitle>Hotels & Places To Stay</SectionTitle>
+                    <SectionBlurb
+                        dangerouslySetInnerHTML={{
+                            __html: dictionary.stayBlurbHTML,
+                        }}
+                    />
+                    <HotelList>
+                        {dictionary.hotels.map(hotel => {
+                            const {
+                                name,
+                                address,
+                                description,
+                                url,
+                            } = hotel.node
+
+                            return (
+                                <Hotel>
+                                    <HotelTitle>{name}</HotelTitle>
+                                    <div>{address}</div>
+                                    <div>{description}</div>
+                                    <HotelLink href={url}>
+                                        Book &#11023;
+                                    </HotelLink>
+                                </Hotel>
+                            )
+                        })}
+                    </HotelList>
+
+                    <ItemTitle>Airbnb</ItemTitle>
+                    <div
+                        dangerouslySetInnerHTML={{
+                            __html: dictionary.airbnbBlurbHTML,
+                        }}
+                    />
+                </ContentBlock>
             </SectionWrapper>
         </>
     )

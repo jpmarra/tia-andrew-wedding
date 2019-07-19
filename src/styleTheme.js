@@ -29,6 +29,12 @@ const styleTheme = {
       letter-spacing: .5px;
       line-height: 26px;
   `,
+    mobileHeading: `
+      font-family: 'Ogg Regular';
+      font-size: 20px;
+      letter-spacing: .5px;
+      line-height: 26px;
+  `,
 }
 
 export default styleTheme
