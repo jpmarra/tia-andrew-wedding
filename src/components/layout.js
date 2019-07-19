@@ -39,20 +39,22 @@ const Layout = ({ children, color }) => {
         }
     }
     return (
-        <ThemeProvider theme={styleTheme}>
-            <GlobalDictionary>
-                {isMobile && (
-                    <>
-                        <MenuButton onClick={() => setIsOpen(true)} />
-                        <BurgerMenu setIsOpen={setIsOpen} isOpen={isOpen} />
-                    </>
-                )}
-                <div id="site-container">
-                    <GlobalStyles />
-                    {children}
-                </div>
-            </GlobalDictionary>
-        </ThemeProvider>
+        <div id="gatsby-container">
+            <ThemeProvider theme={styleTheme}>
+                <GlobalDictionary>
+                    {isMobile && (
+                        <>
+                            <MenuButton onClick={() => setIsOpen(true)} />
+                            <BurgerMenu setIsOpen={setIsOpen} isOpen={isOpen} />
+                        </>
+                    )}
+                    <div id="site-container">
+                        <GlobalStyles />
+                        {children}
+                    </div>
+                </GlobalDictionary>
+            </ThemeProvider>
+        </div>
     )
 }
 
