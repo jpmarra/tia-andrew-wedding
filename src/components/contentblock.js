@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useContext, useState, useLayoutEffect } from 'react'
 import styled from 'styled-components'
 
 import Star from '../assets/star-icon.svg'
@@ -6,12 +6,14 @@ import DictionaryContext from '../dictionarycontext'
 
 export default ({ children, isTitle = false, isQuestions = false }) => {
     const dictionary = useContext(DictionaryContext)
+    const [ssrDone, setSsrDone] = useState(false)
 
-    useEffect(() => {
+    useLayoutEffect(() => {
+        setSsrDone(true)
         if (typeof window !== undefined) {
             dictionary.setIsMobile(window.innerWidth < 920)
         }
-    }, [dictionary.isMobile])
+    }, [])
     const ContentBlock = styled.div`
         width: 100%;
         display: flex;
@@ -67,7 +69,7 @@ export default ({ children, isTitle = false, isQuestions = false }) => {
 
     return (
         <ContentBlock>
-            {!dictionary.isMobile && (
+            {ssrDone && !dictionary.isMobile && (
                 <LeftRail>{isTitle ? <StarIcon /> : ''}</LeftRail>
             )}
             <RightRail>
