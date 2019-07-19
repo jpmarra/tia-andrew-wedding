@@ -97,6 +97,24 @@ const query = graphql`
                 }
             }
 
+            storySectionHeader {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            storySectionBlurb {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            photosBlurb {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
             scheduleHeader {
                 childMarkdownRemark {
                     html
@@ -228,6 +246,18 @@ export default ({ children }) => (
                 afterpartyBlurbHTML: get(
                     data,
                     'contentfulDictionary.afterpartyBlurb.childMarkdownRemark.html'
+                ),
+                storySectionHeaderHTML: get(
+                    data,
+                    'contentfulDictionary.storySectionHeader.childMarkdownRemark.html'
+                ),
+                storySectionBlurbHTML: get(
+                    data,
+                    'contentfulDictionary.storySectionBlurb.childMarkdownRemark.html'
+                ),
+                photosBlurbHTML: get(
+                    data,
+                    'contentfulDictionary.photosBlurb.childMarkdownRemark.html'
                 ),
                 hotels: get(data, 'allContentfulHotel.edges'),
                 questions: get(data, 'allContentfulQuestion.edges'),

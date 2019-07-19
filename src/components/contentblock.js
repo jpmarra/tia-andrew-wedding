@@ -4,7 +4,12 @@ import styled from 'styled-components'
 import Star from '../assets/star-icon.svg'
 import DictionaryContext from '../dictionarycontext'
 
-export default ({ children, isTitle = false, isQuestions = false }) => {
+export default ({
+    children,
+    isTitle = false,
+    isQuestions = false,
+    isImages = false,
+}) => {
     const dictionary = useContext(DictionaryContext)
     const [ssrDone, setSsrDone] = useState(false)
 
@@ -59,10 +64,10 @@ export default ({ children, isTitle = false, isQuestions = false }) => {
     const RightContent = styled.div`
         margin-left: 80px;
         padding: 20px 0;
-        width: ${isTitle ? 90 : 70}%;
+        width: ${isTitle || isImages ? 90 : 70}%;
 
         @media (max-width: 920px) {
-            width: ${isTitle ? 90 : 100}%;
+            width: ${isTitle || isImages ? 90 : 100}%;
             margin-left: 20px;
         }
     `
