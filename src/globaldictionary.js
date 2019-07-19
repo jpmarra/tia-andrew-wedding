@@ -140,15 +140,19 @@ export default ({ children }) => (
     <StaticQuery
         query={query}
         render={data => {
-            const [isMobile, setIsMobile] = useState(window.innerWidth < 920)
+            const [isMobile, setIsMobile] = useState(
+                typeof window !== 'undefined' && window.innerWidth < 920
+            )
 
             useEffect(() => {
-                window.addEventListener('resize', updateDimensions)
+                typeof window !== 'undefined' &&
+                    window.addEventListener('resize', updateDimensions)
                 return () =>
+                    typeof window !== 'undefined' &&
                     window.removeEventListener('resize', updateDimensions)
             })
             const updateDimensions = () => {
-                if (window.innerWidth < 920) {
+                if (typeof window !== 'undefined' && window.innerWidth < 920) {
                     setIsMobile(true)
                 } else {
                     setIsMobile(false)
