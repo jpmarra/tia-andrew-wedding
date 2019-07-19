@@ -160,6 +160,7 @@ export default ({ children }) => (
             }
             const dictionary = {
                 isMobile,
+                setIsMobile,
                 heroTextHTML: get(
                     data,
                     'contentfulDictionary.heroText.childMarkdownRemark.html'

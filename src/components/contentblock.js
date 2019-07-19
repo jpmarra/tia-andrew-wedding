@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import styled from 'styled-components'
 
 import Star from '../assets/star-icon.svg'
@@ -6,6 +6,12 @@ import DictionaryContext from '../dictionarycontext'
 
 export default ({ children, isTitle = false, isQuestions = false }) => {
     const dictionary = useContext(DictionaryContext)
+
+    useEffect(() => {
+        if (typeof window !== undefined) {
+            dictionary.setIsMobile(window.innerWidth < 920)
+        }
+    }, [])
     const ContentBlock = styled.div`
         width: 100%;
         display: flex;
