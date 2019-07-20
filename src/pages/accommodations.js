@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Layout from '../components/layout'
 import Container from '../components/container'
 import Header from '../components/header'
-import AccomodationsList from '../components/accomodationslist'
+import AccommodationsList from '../components/accommodationslist'
 import Footer from '../components/footer'
 
 export default () => {
@@ -22,7 +22,7 @@ export default () => {
             <Header />
             <Wrapper>
                 <Container class="center">
-                    <AccomodationsList />
+                    <AccommodationsList />
                 </Container>
             </Wrapper>
             <Footer />

@@ -78,7 +78,11 @@ export default () => {
     return (
         <>
             <ContentBlock isTitle>
-                <PageTitle>Accommodations</PageTitle>
+                <PageTitle
+                    dangerouslySetInnerHTML={{
+                        __html: dictionary.accommodationsTitleHTML,
+                    }}
+                />
                 <PageHeader
                     dangerouslySetInnerHTML={{
                         __html: dictionary.accommodationsHeaderHTML,
@@ -87,19 +91,31 @@ export default () => {
             </ContentBlock>
             <SectionWrapper>
                 <ContentBlock>
-                    <SectionTitle>Getting Around</SectionTitle>
+                    <SectionTitle
+                        dangerouslySetInnerHTML={{
+                            __html: dictionary.gettingAroundSectionTitleHTML,
+                        }}
+                    />
                     <SectionBlurb
                         dangerouslySetInnerHTML={{
                             __html: dictionary.travelBlurbHTML,
                         }}
                     />
-                    <ItemTitle>From the Airport</ItemTitle>
+                    <ItemTitle
+                        dangerouslySetInnerHTML={{
+                            __html: dictionary.airportTitleHTML,
+                        }}
+                    />
                     <div
                         dangerouslySetInnerHTML={{
                             __html: dictionary.airportBlurbHTML,
                         }}
                     />
-                    <ItemTitle>Getting Around</ItemTitle>
+                    <ItemTitle
+                        dangerouslySetInnerHTML={{
+                            __html: dictionary.gettingAroundSectionTitleHTML,
+                        }}
+                    />
                     <div
                         dangerouslySetInnerHTML={{
                             __html: dictionary.gettingAroundBlurbHTML,
@@ -107,25 +123,41 @@ export default () => {
                     />
                 </ContentBlock>
                 <ContentBlock>
-                    <SectionTitle>Things To Do</SectionTitle>
+                    <SectionTitle
+                        dangerouslySetInnerHTML={{
+                            __html: dictionary.enjoyTitleHTML,
+                        }}
+                    />
                     <SectionBlurb
                         dangerouslySetInnerHTML={{
                             __html: dictionary.enjoyBlurbHTML,
                         }}
                     />
-                    <ItemTitle>Society Hill / Queens Village</ItemTitle>
+                    <ItemTitle
+                        dangerouslySetInnerHTML={{
+                            __html: dictionary.societyHillTitleHTML,
+                        }}
+                    />
                     <div
                         dangerouslySetInnerHTML={{
                             __html: dictionary.societyHillBlurbHTML,
                         }}
                     />
-                    <ItemTitle>Old City</ItemTitle>
+                    <ItemTitle
+                        dangerouslySetInnerHTML={{
+                            __html: dictionary.oldCityTitleHTML,
+                        }}
+                    />
                     <div
                         dangerouslySetInnerHTML={{
                             __html: dictionary.oldCityBlurbHTML,
                         }}
                     />
-                    <ItemTitle>Fishtown</ItemTitle>
+                    <ItemTitle
+                        dangerouslySetInnerHTML={{
+                            __html: dictionary.fishtownTitleHTML,
+                        }}
+                    />
                     <div
                         dangerouslySetInnerHTML={{
                             __html: dictionary.fishtownBlurbHTML,
@@ -133,7 +165,11 @@ export default () => {
                     />
                 </ContentBlock>
                 <ContentBlock>
-                    <SectionTitle>Hotels & Places To Stay</SectionTitle>
+                    <SectionTitle
+                        dangerouslySetInnerHTML={{
+                            __html: dictionary.staySectionTitleHTML,
+                        }}
+                    />
                     <SectionBlurb
                         dangerouslySetInnerHTML={{
                             __html: dictionary.stayBlurbHTML,
@@ -153,15 +189,17 @@ export default () => {
                                     <HotelTitle>{name}</HotelTitle>
                                     <div>{address}</div>
                                     <div>{description}</div>
-                                    <HotelLink href={url}>
-                                        Book &#11023;
-                                    </HotelLink>
+                                    <HotelLink href={url}>Book</HotelLink>
                                 </Hotel>
                             )
                         })}
                     </HotelList>
 
-                    <ItemTitle>Airbnb</ItemTitle>
+                    <ItemTitle
+                        dangerouslySetInnerHTML={{
+                            __html: dictionary.airbnbTitleHTML,
+                        }}
+                    />
                     <div
                         dangerouslySetInnerHTML={{
                             __html: dictionary.airbnbBlurbHTML,

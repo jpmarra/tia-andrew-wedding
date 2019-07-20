@@ -59,7 +59,11 @@ export default () => {
         <>
             <ContentBlock isTitle>
                 <PageTitle>
-                    <div>Schedule</div>
+                    <div
+                        dangerouslySetInnerHTML={{
+                            __html: dictionary.scheduleTitleHTML,
+                        }}
+                    />
                 </PageTitle>
                 <PageHeader
                     dangerouslySetInnerHTML={{
@@ -68,21 +72,43 @@ export default () => {
                 />
             </ContentBlock>
             <ContentBlock>
-                <SectionTitle>Ceremony & Reception</SectionTitle>
+                <SectionTitle
+                    dangerouslySetInnerHTML={{
+                        __html: dictionary.ceremonySectionTitleHTML,
+                    }}
+                />
                 <div
                     dangerouslySetInnerHTML={{
                         __html: dictionary.ceremonyBlurbHTML,
                     }}
                 />
-                <ItemTitle>Saturday, September 28th, 2019</ItemTitle>
-                <div>321 South 4th Street</div>
-                <div style={{ marginBottom: '20px' }}>
-                    Philadelphia, PA 19106
-                </div>
-                <ItemTitle>Ceremony begins at 5:30pm</ItemTitle>
-                <ItemTitle style={{ marginTop: '0px', marginBottom: '20px' }}>
-                    Reception to immediately follow
-                </ItemTitle>
+                <ItemTitle
+                    dangerouslySetInnerHTML={{
+                        __html: dictionary.scheduleDateHTML,
+                    }}
+                />
+                <div
+                    dangerouslySetInnerHTML={{
+                        __html: dictionary.venueAddressLine1HTML,
+                    }}
+                />
+                <div
+                    style={{ marginBottom: '20px' }}
+                    dangerouslySetInnerHTML={{
+                        __html: dictionary.venueAddressLine2HTML,
+                    }}
+                />
+                <ItemTitle
+                    dangerouslySetInnerHTML={{
+                        __html: dictionary.ceremonyInfoLine1HTML,
+                    }}
+                />
+                <ItemTitle
+                    style={{ marginTop: '0px', marginBottom: '20px' }}
+                    dangerouslySetInnerHTML={{
+                        __html: dictionary.ceremonyInfoLine2HTML,
+                    }}
+                />
                 <Button>
                     <ButtonText>View Map</ButtonText>
                 </Button>
@@ -91,20 +117,38 @@ export default () => {
                 </Button>
             </ContentBlock>
             <ContentBlock>
-                <SectionTitle>Afterparty</SectionTitle>
+                <SectionTitle
+                    dangerouslySetInnerHTML={{
+                        __html: dictionary.afterpartySectionTitleHTML,
+                    }}
+                />
                 <div
                     dangerouslySetInnerHTML={{
                         __html: dictionary.afterpartyBlurbHTML,
                     }}
                 />
-                <ItemTitle>Saturday, September 28th, 2019</ItemTitle>
-                <div>321 South 4th Street</div>
-                <div style={{ marginBottom: '20px' }}>
-                    Philadelphia, PA 19106
-                </div>
-                <ItemTitle style={{ marginBottom: '20px' }}>
-                    Afterparty follows the reception around 11:00pm
-                </ItemTitle>
+                <ItemTitle
+                    dangerouslySetInnerHTML={{
+                        __html: dictionary.scheduleDateHTML,
+                    }}
+                />
+                <div
+                    dangerouslySetInnerHTML={{
+                        __html: dictionary.venueAddressLine1HTML,
+                    }}
+                />
+                <div
+                    style={{ marginBottom: '20px' }}
+                    dangerouslySetInnerHTML={{
+                        __html: dictionary.venueAddressLine2HTML,
+                    }}
+                />
+                <ItemTitle
+                    style={{ marginBottom: '20px' }}
+                    dangerouslySetInnerHTML={{
+                        __html: dictionary.afterpartyInfoLine1HTML,
+                    }}
+                />
                 <Button>
                     <ButtonText>View Map</ButtonText>
                 </Button>

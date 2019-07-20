@@ -22,6 +22,7 @@ const questionComponent = ({ question, answer, isOpen = false }) => {
         }
 
         .expand {
+            cursor: pointer;
             border: none;
             background: none;
             color: ${props => props.theme.maroon};

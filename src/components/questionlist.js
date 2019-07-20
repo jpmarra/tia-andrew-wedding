@@ -24,9 +24,11 @@ export default () => {
     return (
         <>
             <ContentBlock isTitle>
-                <PageTitle>
-                    <div>Frequently Asked Questions</div>
-                </PageTitle>
+                <PageTitle
+                    dangerouslySetInnerHTML={{
+                        __html: dictionary.faqTitleHTML,
+                    }}
+                />
                 <PageHeader
                     dangerouslySetInnerHTML={{
                         __html: dictionary.faqHeaderHTML,

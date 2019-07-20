@@ -17,6 +17,19 @@ export default props => {
             font-size: 30px;
         }
     `
+
+    const NavItem = styled.a`
+        ${props => props.theme.h1Heading}
+        text-decoration: none;
+        text-align: center;
+        margin: 15px 0;
+        color: ${props => props.theme.cream};
+        cursor: pointer;
+
+        @media (max-width: 920px) {
+            font-size: 30px;
+        }
+    `
     const MenuWrapper = styled.div`
         z-index: 1000;
         display: flex;
@@ -81,10 +94,18 @@ export default props => {
                         >
                             Accommodations
                         </NavLink>
-                        <NavLink href="https://www.google.com">RSVP</NavLink>
-                        <NavLink href="https://www.google.com">
+                        <NavItem
+                            target="_blank"
+                            href="https://andrewmcquiston.typeform.com/to/F9MFly"
+                        >
+                            RSVP
+                        </NavItem>
+                        <NavItem
+                            target="_blank"
+                            href="https://www.zola.com/registry/andrewandtia"
+                        >
                             Registry
-                        </NavLink>
+                        </NavItem>
                         <StarWrapper>
                             <Star />
                         </StarWrapper>

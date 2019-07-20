@@ -126,6 +126,132 @@ const query = graphql`
                     html
                 }
             }
+
+            airbnbTitle {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            staySectionTitle {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            fishtownTitle {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            oldCityTitle {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            societyHillTitle {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            enjoyTitle {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            airportTitle {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            gettingAroundSectionTitle {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            accommodationsTitle {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            storyTitle {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            photosSectionTitle {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            scheduleTitle {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            ceremonySectionTitle {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            venueAddressLine1 {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            venueAddressLine2 {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            scheduleDate {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            ceremonyInfoLine1 {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            ceremonyInfoLine2 {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            afterpartySectionTitle {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            afterpartyInfoLine1 {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            faqTitle {
+                childMarkdownRemark {
+                    html
+                }
+            }
         }
 
         allContentfulHotel {
@@ -258,6 +384,90 @@ export default ({ children }) => (
                 photosBlurbHTML: get(
                     data,
                     'contentfulDictionary.photosBlurb.childMarkdownRemark.html'
+                ),
+                accommodationsTitleHTML: get(
+                    data,
+                    'contentfulDictionary.accommodationsTitle.childMarkdownRemark.html'
+                ),
+                gettingAroundSectionTitleHTML: get(
+                    data,
+                    'contentfulDictionary.gettingAroundSectionTitle.childMarkdownRemark.html'
+                ),
+                airportTitleHTML: get(
+                    data,
+                    'contentfulDictionary.airportTitle.childMarkdownRemark.html'
+                ),
+                enjoyTitleHTML: get(
+                    data,
+                    'contentfulDictionary.enjoyTitle.childMarkdownRemark.html'
+                ),
+                societyHillTitleHTML: get(
+                    data,
+                    'contentfulDictionary.societyHillTitle.childMarkdownRemark.html'
+                ),
+                oldCityTitleHTML: get(
+                    data,
+                    'contentfulDictionary.oldCityTitle.childMarkdownRemark.html'
+                ),
+                fishtownTitleHTML: get(
+                    data,
+                    'contentfulDictionary.fishtownTitle.childMarkdownRemark.html'
+                ),
+                staySectionTitleHTML: get(
+                    data,
+                    'contentfulDictionary.staySectionTitle.childMarkdownRemark.html'
+                ),
+                airbnbTitleHTML: get(
+                    data,
+                    'contentfulDictionary.airbnbTitle.childMarkdownRemark.html'
+                ),
+                storyTitleHTML: get(
+                    data,
+                    'contentfulDictionary.storyTitle.childMarkdownRemark.html'
+                ),
+                photosSectionTitleHTML: get(
+                    data,
+                    'contentfulDictionary.photosSectionTitle.childMarkdownRemark.html'
+                ),
+                scheduleTitleHTML: get(
+                    data,
+                    'contentfulDictionary.scheduleTitle.childMarkdownRemark.html'
+                ),
+                ceremonySectionTitleHTML: get(
+                    data,
+                    'contentfulDictionary.ceremonySectionTitle.childMarkdownRemark.html'
+                ),
+                venueAddressLine1HTML: get(
+                    data,
+                    'contentfulDictionary.venueAddressLine1.childMarkdownRemark.html'
+                ),
+                venueAddressLine2HTML: get(
+                    data,
+                    'contentfulDictionary.venueAddressLine2.childMarkdownRemark.html'
+                ),
+                scheduleDateHTML: get(
+                    data,
+                    'contentfulDictionary.scheduleDate.childMarkdownRemark.html'
+                ),
+                ceremonyInfoLine1HTML: get(
+                    data,
+                    'contentfulDictionary.ceremonyInfoLine1.childMarkdownRemark.html'
+                ),
+                ceremonyInfoLine2HTML: get(
+                    data,
+                    'contentfulDictionary.ceremonyInfoLine2.childMarkdownRemark.html'
+                ),
+                afterpartySectionTitleHTML: get(
+                    data,
+                    'contentfulDictionary.afterpartySectionTitle.childMarkdownRemark.html'
+                ),
+                afterpartyInfoLine1HTML: get(
+                    data,
+                    'contentfulDictionary.afterpartyInfoLine1.childMarkdownRemark.html'
+                ),
+                faqTitleHTML: get(
+                    data,
+                    'contentfulDictionary.faqTitle.childMarkdownRemark.html'
                 ),
                 hotels: get(data, 'allContentfulHotel.edges'),
                 questions: get(data, 'allContentfulQuestion.edges'),

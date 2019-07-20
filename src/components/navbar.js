@@ -53,8 +53,18 @@ const NavBar = ({ color, hoverColor }) => {
             <NavLink to="/schedule">Schedule</NavLink>
             <NavLink to="/faqs">FAQs</NavLink>
             <NavLink to="/accommodations">Accommodations</NavLink>
-            <NavItem href="https://www.google.com">RSVP &#11023;</NavItem>
-            <NavItem href="https://www.google.com">Registry &#11023;</NavItem>
+            <NavItem
+                target="_blank"
+                href="https://andrewmcquiston.typeform.com/to/F9MFly"
+            >
+                RSVP
+            </NavItem>
+            <NavItem
+                target="_blank"
+                href="https://www.zola.com/registry/andrewandtia"
+            >
+                Registry
+            </NavItem>
         </Wrapper>
     )
 }

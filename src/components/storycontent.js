@@ -88,9 +88,11 @@ export default () => (
             return (
                 <>
                     <ContentBlock isTitle>
-                        <PageTitle>
-                            <div>Our Story</div>
-                        </PageTitle>
+                        <PageTitle
+                            dangerouslySetInnerHTML={{
+                                __html: dictionary.storyTitleHTML,
+                            }}
+                        />
                         <PageHeader
                             dangerouslySetInnerHTML={{
                                 __html: dictionary.storyHeaderHTML,
@@ -110,7 +112,11 @@ export default () => (
                         />
                     </ContentBlock>
                     <ContentBlock isImages>
-                        <SectionTitle>Photos</SectionTitle>
+                        <SectionTitle
+                            dangerouslySetInnerHTML={{
+                                __html: dictionary.photosSectionTitleHTML,
+                            }}
+                        />
                         <PhotosBlurb>
                             <div
                                 style={{ marginBottom: '10px' }}
@@ -118,8 +124,11 @@ export default () => (
                                     __html: dictionary.photosBlurbHTML,
                                 }}
                             />
-                            <PhotoLink>
-                                Viva Love Photography &#11023;
+                            <PhotoLink
+                                target="_blank"
+                                href="http://www.vivalovephoto.com/"
+                            >
+                                Viva Love Photography
                             </PhotoLink>
                         </PhotosBlurb>
                         <ImageGrid>
