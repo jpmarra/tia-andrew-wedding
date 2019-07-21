@@ -12,7 +12,16 @@ export default () => {
         min-height: calc(100vh - 141px);
         display: flex;
         justify-content: center;
-        background-color: ${props => props.theme.cream};
+        background-color: ${props => props.theme.red};
+    `
+
+    const FourOhFour = styled.div`
+        ${props => props.theme.primaryHeading}
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     `
     return (
         <Layout>
