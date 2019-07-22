@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import DictionaryContext from '../dictionarycontext'
 import NavBar from './navbar'
-import Star from '../assets/star-icon.svg'
+import Burst from '../assets/burst.svg'
 
 const Footer = () => {
     const dictionary = useContext(DictionaryContext)
@@ -14,21 +14,21 @@ const Footer = () => {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: ${props => props.theme.black};
+        background-color: ${props => props.theme.maroon};
     `
     const StarWrapper = styled.div`
-        color: ${props => props.theme.red};
+        color: ${props => props.theme.orange};
         display: flex;
         margin-top: 50px;
     `
-    const StarIcon = styled(Star)`
+    const BurstIcon = styled(Burst)`
         fill: currentColor;
         margin: 0 10px;
     `
     const FooterText = styled.div`
         ${props => props.theme.h1Heading};
         margin-top: 15px;
-        color: ${props => props.theme.red};
+        color: ${props => props.theme.orange};
         display: flex;
         flex-direction: column;
 
@@ -60,8 +60,7 @@ const Footer = () => {
     return (
         <Wrapper>
             <StarWrapper>
-                <StarIcon />
-                <StarIcon />
+                <BurstIcon />
             </StarWrapper>
             <FooterText
                 dangerouslySetInnerHTML={{ __html: dictionary.footerTextHTML }}

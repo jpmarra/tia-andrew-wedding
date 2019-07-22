@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-import Star from '../assets/star-icon.svg'
+import Burst from '../assets/burst.svg'
 import Close from '../assets/close.svg'
 
 export default props => {
@@ -107,7 +107,7 @@ export default props => {
                             Registry
                         </NavItem>
                         <StarWrapper>
-                            <Star />
+                            <Burst />
                         </StarWrapper>
                     </MobileMenu>
                 </MenuWrapper>
