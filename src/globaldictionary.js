@@ -277,6 +277,15 @@ const query = graphql`
                 }
             }
         }
+
+        allContentfulLinkButton {
+            nodes {
+                contentful_id
+                link
+                buttonText
+                buttonNumber
+            }
+        }
     }
 `
 
@@ -471,6 +480,19 @@ export default ({ children }) => (
                 ),
                 hotels: get(data, 'allContentfulHotel.edges'),
                 questions: get(data, 'allContentfulQuestion.edges'),
+                buttons: get(data, 'allContentfulLinkButton.nodes'),
+                rsvpButton: data.allContentfulLinkButton.nodes.find(
+                    button => button.buttonNumber === 1
+                ),
+                registryButton: data.allContentfulLinkButton.nodes.find(
+                    button => button.buttonNumber === 2
+                ),
+                getDirectionsButton: data.allContentfulLinkButton.nodes.find(
+                    button => button.buttonNumber === 3
+                ),
+                viewMapButton: data.allContentfulLinkButton.nodes.find(
+                    button => button.buttonNumber === 4
+                ),
             }
             return (
                 <DictionaryContext.Provider value={dictionary}>

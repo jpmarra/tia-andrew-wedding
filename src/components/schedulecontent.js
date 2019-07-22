@@ -34,15 +34,17 @@ export default () => {
         margin-top: 10px;
     `
 
-    const Button = styled.button`
+    const Button = styled.a`
         ${props => props.theme.h3Heading}
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 210px;
         height: 45px;
         margin-bottom: 20px;
-        background-color: ${props => props.theme.cream};
         cursor: pointer;
         color: ${props => props.theme.maroon};
+        background-color: ${props => props.theme.cream};
         border: 1px solid ${props => props.theme.maroon};
 
         &:hover {
@@ -109,11 +111,18 @@ export default () => {
                         __html: dictionary.ceremonyInfoLine2HTML,
                     }}
                 />
-                <Button>
-                    <ButtonText>View Map</ButtonText>
+                <Button target="_blank" href={dictionary.viewMapButton.link}>
+                    <ButtonText>
+                        {dictionary.viewMapButton.buttonText}
+                    </ButtonText>
                 </Button>
-                <Button>
-                    <ButtonText>Get Directions</ButtonText>
+                <Button
+                    target="_blank"
+                    href={dictionary.getDirectionsButton.link}
+                >
+                    <ButtonText>
+                        {dictionary.getDirectionsButton.buttonText}
+                    </ButtonText>
                 </Button>
             </ContentBlock>
             <ContentBlock>
@@ -149,11 +158,18 @@ export default () => {
                         __html: dictionary.afterpartyInfoLine1HTML,
                     }}
                 />
-                <Button>
-                    <ButtonText>View Map</ButtonText>
+                <Button target="_blank" href={dictionary.viewMapButton.link}>
+                    <ButtonText>
+                        {dictionary.viewMapButton.buttonText}
+                    </ButtonText>
                 </Button>
-                <Button>
-                    <ButtonText>Get Directions</ButtonText>
+                <Button
+                    target="_blank"
+                    href={dictionary.getDirectionsButton.link}
+                >
+                    <ButtonText>
+                        {dictionary.getDirectionsButton.buttonText}
+                    </ButtonText>
                 </Button>
             </ContentBlock>
         </>

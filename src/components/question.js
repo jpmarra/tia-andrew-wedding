@@ -1,13 +1,8 @@
 import React, { useState } from 'react'
-import { useSpring, animated } from 'react-spring'
 import styled from 'styled-components'
 
 const questionComponent = ({ question, answer, isOpen = false }) => {
     const [open, setOpen] = useState(isOpen)
-    const props = useSpring({
-        from: { top: '0%' },
-        to: { top: '50%' },
-    })
 
     const StyledQuestion = styled.div`
         display: flex;
@@ -17,8 +12,15 @@ const questionComponent = ({ question, answer, isOpen = false }) => {
         color: ${props => props.theme.maroon};
 
         .question {
+            ${props => props.theme.h3Heading}
+            color: ${props => props.theme.maroon};
             display: flex;
             justify-content: space-between;
+        }
+
+        .answer {
+            padding-top: 10px;
+            width: 70%;
         }
 
         .expand {
@@ -40,8 +42,8 @@ const questionComponent = ({ question, answer, isOpen = false }) => {
                 </span>
             </div>
             {open && (
-                <animated.div
-                    style={props}
+                <div
+                    className="answer"
                     dangerouslySetInnerHTML={{
                         __html: answer.childMarkdownRemark.html,
                     }}

@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
+import DictionaryContext from '../dictionarycontext'
 
 const NavBar = ({ color, hoverColor }) => {
+    const dictionary = useContext(DictionaryContext)
     const colors = {
         white: `#FFFFFF`,
         black: `#111111`,
@@ -51,19 +53,13 @@ const NavBar = ({ color, hoverColor }) => {
         <Wrapper>
             <NavLink to="/story">Our Story</NavLink>
             <NavLink to="/schedule">Schedule</NavLink>
-            <NavLink to="/faqs">FAQs</NavLink>
+            <NavLink to="/details">Details</NavLink>
             <NavLink to="/accommodations">Accommodations</NavLink>
-            <NavItem
-                target="_blank"
-                href="https://andrewmcquiston.typeform.com/to/F9MFly"
-            >
-                RSVP
+            <NavItem target="_blank" href={dictionary.rsvpButton.link}>
+                {dictionary.rsvpButton.buttonText}
             </NavItem>
-            <NavItem
-                target="_blank"
-                href="https://www.zola.com/registry/andrewandtia"
-            >
-                Registry
+            <NavItem target="_blank" href={dictionary.registryButton.link}>
+                {dictionary.registryButton.buttonText}
             </NavItem>
         </Wrapper>
     )

@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import Burst from '../assets/burst.svg'
 import Close from '../assets/close.svg'
+import DictionaryContext from '../dictionarycontext'
 
 export default props => {
+    const dictionary = useContext(DictionaryContext)
     const NavLink = styled(Link)`
         ${props => props.theme.h1Heading}
         text-decoration: none;
@@ -83,10 +85,10 @@ export default props => {
                             Schedule
                         </NavLink>
                         <NavLink
-                            to="/faqs"
+                            to="/details"
                             onClick={() => props.setIsOpen(false)}
                         >
-                            FAQs
+                            Details
                         </NavLink>
                         <NavLink
                             to="/accommodations"
@@ -96,15 +98,15 @@ export default props => {
                         </NavLink>
                         <NavItem
                             target="_blank"
-                            href="https://andrewmcquiston.typeform.com/to/F9MFly"
+                            href={dictionary.rsvpButton.link}
                         >
-                            RSVP
+                            {dictionary.rsvpButton.buttonText}
                         </NavItem>
                         <NavItem
                             target="_blank"
-                            href="https://www.zola.com/registry/andrewandtia"
+                            href={dictionary.registryButton.link}
                         >
-                            Registry
+                            {dictionary.registryButton.buttonText}
                         </NavItem>
                         <StarWrapper>
                             <Burst />
