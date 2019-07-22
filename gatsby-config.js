@@ -50,5 +50,15 @@ module.exports = {
                 },
             },
         },
+        {
+            resolve: `gatsby-plugin-manifest`,
+            options: {
+                name: 'Tia & Andrew',
+                short_name: 'tia-andrew',
+                start_url: '/',
+                display: 'standalone',
+                icon: 'src/images/icon.png',
+            },
+        },
     ],
 }
