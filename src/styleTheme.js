@@ -15,7 +15,7 @@ const styleTheme = {
       font-family: 'Ogg Regular';
       font-size: 35px;
       letter-spacing: .5px;
-      line-height: 40px;
+      line-height: 45px;
     `,
     h2Heading: `
       font-family: 'Founders Grotesk Medium';

@@ -14,7 +14,7 @@ const Footer = () => {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: ${props => props.theme.maroon};
+        background-color: #320109;
     `
     const StarWrapper = styled.div`
         color: ${props => props.theme.orange};
@@ -28,6 +28,7 @@ const Footer = () => {
     const FooterText = styled.div`
         ${props => props.theme.h1Heading};
         margin-top: 15px;
+        margin-bottom: 60px;
         color: ${props => props.theme.orange};
         display: flex;
         flex-direction: column;
@@ -46,14 +47,14 @@ const Footer = () => {
         font-family: 'Founders Grotesk Medium';
         font-size: 12px;
         letter-spacing: 0.5px;
-        color: ${props => props.theme.cream};
+        color: ${props => props.theme.red};
         margin-bottom: 20px;
         a {
             text-decoration: none;
-            color: ${props => props.theme.cream};
+            color: ${props => props.theme.red};
 
             &:hover {
-                color: ${props => props.theme.red};
+                color: ${props => props.theme.cream};
             }
         }
     `
@@ -65,9 +66,6 @@ const Footer = () => {
             <FooterText
                 dangerouslySetInnerHTML={{ __html: dictionary.footerTextHTML }}
             />
-            <NavWrapper>
-                <NavBar color="cream" hoverColor="red" />
-            </NavWrapper>
             <Credits>
                 Website design by{' '}
                 <a href="http://www.andrewmcqustion.com">A. Mcquiston</a>.

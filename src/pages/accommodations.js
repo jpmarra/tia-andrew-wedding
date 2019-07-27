@@ -7,7 +7,7 @@ import Header from '../components/header'
 import AccommodationsList from '../components/accommodationslist'
 import Footer from '../components/footer'
 
-export default () => {
+export default ({ location }) => {
     const Wrapper = styled.div`
         width: 100%;
         height: 100vh;
@@ -19,7 +19,7 @@ export default () => {
 
     return (
         <Layout color="orange">
-            <Header />
+            <Header location={location} />
             <Wrapper>
                 <Container class="center">
                     <AccommodationsList />

@@ -50,7 +50,8 @@ export default () => {
                     align-items: center;
 
                     @media (max-width: 920px) {
-                        font-size: 45px;
+                        font-size: 40px;
+                        width: 80%;
                     }
                 `
 

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import DictionaryContext from '../dictionarycontext'
 
-const NavBar = ({ color, hoverColor }) => {
+const NavBar = ({ color, hoverColor, location }) => {
     const dictionary = useContext(DictionaryContext)
     const colors = {
         white: `#FFFFFF`,
@@ -21,7 +21,9 @@ const NavBar = ({ color, hoverColor }) => {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
         width: max-content;
+        height: 100%;
 
         @media (max-width: 920px) {
             flex-direction: column;
@@ -32,17 +34,26 @@ const NavBar = ({ color, hoverColor }) => {
     const NavItem = styled.a`
         ${props => props.theme.h3Heading};
         text-decoration: none;
-        margin: 0 10px 0 10px;
+        margin: 0 10px -5px 10px;
         color: ${color ? color : '#641A1F'};
 
         &:hover {
             color: ${hoverColor ? hoverColor : '#FEF2E9'};
         }
     `
+    const LinkWrapper = styled.div`
+        display: flex;
+        align-items: center;
+        height: 100%;
+        border-bottom: ${props =>
+            props.isSelected ? '3px solid' + color : 'none'};
+    `
+
     const NavLink = styled(Link)`
         ${props => props.theme.h3Heading};
         text-decoration: none;
         margin: 0 10px 0 10px;
+        margin-bottom: ${props => (props.isSelected ? '-8px' : '-5px')};
         color: ${color ? color : '#641A1F'};
 
         &:hover {
@@ -51,10 +62,56 @@ const NavBar = ({ color, hoverColor }) => {
     `
     return (
         <Wrapper>
-            <NavLink to="/story">Our Story</NavLink>
-            <NavLink to="/schedule">Schedule</NavLink>
-            <NavLink to="/details">Details</NavLink>
-            <NavLink to="/accommodations">Accommodations</NavLink>
+            <LinkWrapper isSelected={location && location.pathname === '/'}>
+                <NavLink
+                    isSelected={location && location.pathname === '/'}
+                    to="/"
+                >
+                    Home
+                </NavLink>
+            </LinkWrapper>
+            <LinkWrapper
+                isSelected={location && location.pathname === '/story'}
+            >
+                <NavLink
+                    isSelected={location && location.pathname === '/story'}
+                    to="/story"
+                >
+                    Our Story
+                </NavLink>
+            </LinkWrapper>
+            <LinkWrapper
+                isSelected={location && location.pathname === '/schedule'}
+            >
+                <NavLink
+                    isSelected={location && location.pathname === '/schedule'}
+                    to="/schedule"
+                >
+                    Schedule
+                </NavLink>
+            </LinkWrapper>
+            <LinkWrapper
+                isSelected={location && location.pathname === '/accommodations'}
+            >
+                <NavLink
+                    isSelected={
+                        location && location.pathname === '/accommodations'
+                    }
+                    to="/accommodations"
+                >
+                    Accommodations
+                </NavLink>
+            </LinkWrapper>
+            <LinkWrapper
+                isSelected={location && location.pathname === '/details'}
+            >
+                <NavLink
+                    isSelected={location && location.pathname === '/details'}
+                    to="/details"
+                >
+                    Details
+                </NavLink>
+            </LinkWrapper>
             <NavItem target="_blank" href={dictionary.rsvpButton.link}>
                 {dictionary.rsvpButton.buttonText}
             </NavItem>

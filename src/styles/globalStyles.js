@@ -15,6 +15,7 @@ export default createGlobalStyle`
         font-family: 'Founders Grotesk Medium';
         font-style: normal;
         font-weight: 300;
+        line-height: 22px;
         src: url(${fontFiles.FoundersGroteskEOT}) format('eot');
         src: url(${fontFiles.FoundersGroteskWOFF}) format('woff');
     }
@@ -23,6 +24,7 @@ export default createGlobalStyle`
         font-family: 'Founders Grotesk Regular';
         font-style: normal;
         font-weight: 300;
+        line-height: 22px;
         src: url(${fontFiles.FoundersGroteskRegEOT}) format('eot');
         src: url(${fontFiles.FoundersGroteskRegWOFF}) format('woff');
     }

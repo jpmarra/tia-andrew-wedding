@@ -18,7 +18,7 @@ const query = graphql`
     }
 `
 
-export default () => (
+export default ({ location }) => (
     <StaticQuery
         query={query}
         render={data => {
@@ -49,10 +49,9 @@ export default () => (
 
             const NavLinks = styled.div`
                 width: 100%;
+                height: 50px;
                 display: flex;
                 justify-content: center;
-                padding-top: 15px;
-                padding-bottom: 10px;
                 border-color: ${props => props.theme.maroon};
                 border-top: 1px solid;
                 border-bottom: 1px solid;
@@ -73,7 +72,11 @@ export default () => (
                     </BackgroundImage>
                     {!dictionary.isMobile && (
                         <NavLinks>
-                            <NavBar color="maroon" hoverColor="cream" />
+                            <NavBar
+                                color="maroon"
+                                hoverColor="cream"
+                                location={location}
+                            />
                         </NavLinks>
                     )}
                 </NavContainer>

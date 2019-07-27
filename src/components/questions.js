@@ -10,6 +10,7 @@ const questions = () => {
     const StyledQuestions = styled.div`
         display: flex;
         flex-flow: column;
+        width: 75%;
         border-top: 1px solid;
         border-color: ${props => props.theme.maroon};
     `

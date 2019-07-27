@@ -7,7 +7,7 @@ import Header from '../components/header'
 import QuestionList from '../components/questionlist'
 import Footer from '../components/footer'
 import StoryContent from '../components/storycontent'
-export default () => {
+export default ({ location }) => {
     const Wrapper = styled.div`
         width: 100%;
         min-height: calc(100vh - 141px);
@@ -17,7 +17,7 @@ export default () => {
     `
     return (
         <Layout>
-            <Header />
+            <Header location={location} />
             <Wrapper>
                 <Container class="center">
                     <StoryContent />

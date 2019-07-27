@@ -31,7 +31,7 @@ export default () => {
     const ItemTitle = styled.div`
         ${props => props.theme.h3Heading}
         color: ${props => props.theme.maroon};
-        margin-top: 10px;
+        margin-top: 30px;
     `
 
     const Button = styled.a`
@@ -46,6 +46,10 @@ export default () => {
         color: ${props => props.theme.maroon};
         background-color: ${props => props.theme.cream};
         border: 1px solid ${props => props.theme.maroon};
+
+        &:last-child {
+            margin-bottom: 0;
+        }
 
         &:hover {
             color: ${props => props.theme.orange};

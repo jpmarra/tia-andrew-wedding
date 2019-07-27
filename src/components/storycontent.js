@@ -60,6 +60,7 @@ export default () => (
 
             const ImageGrid = styled.div`
                 display: grid;
+                width: 85%;
                 grid-gap: 20px;
                 grid-template-columns: repeat(2, 1fr);
             `
@@ -71,7 +72,7 @@ export default () => (
             `
 
             const PhotosBlurb = styled.div`
-                width: 80%;
+                width: 65%;
                 margin-bottom: 40px;
             `
 

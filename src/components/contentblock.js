@@ -58,16 +58,18 @@ export default ({
     `
 
     const RightRail = styled.div`
-        width: ${dictionary.isMobile || isTitle || isQuestions ? 90 : 60}%;
+        width: 95%;
     `
 
     const RightContent = styled.div`
         margin-left: 80px;
-        padding: 20px 0;
-        width: ${isTitle || isImages ? 90 : 70}%;
+        padding: 20px 0 60px 0;
+        width: ${dictionary.isMobile || isTitle || isQuestions || isImages
+            ? 90
+            : 55}%;
 
         @media (max-width: 920px) {
-            width: ${isTitle || isImages ? 90 : 100}%;
+            width: ${dictionary.isMobile || isTitle || isQuestions ? 90 : 100}%;
             margin-left: 20px;
         }
     `

@@ -38,20 +38,18 @@ export default () => {
         color: ${props => props.theme.maroon};
     `
 
-    const SectionBlurb = styled.div`
-        margin-bottom: 30px;
-    `
+    const SectionBlurb = styled.div``
 
     const ItemTitle = styled.div`
         ${props => props.theme.h3Heading}
         color: ${props => props.theme.maroon};
-        margin-top: 10px;
+        margin-top: 30px;
     `
 
     const HotelList = styled.div`
         width: 100%;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
 
         @media (max-width: 920px) {
             flex-direction: column;
@@ -59,11 +57,14 @@ export default () => {
     `
 
     const Hotel = styled.div`
-        margin-bottom: 10px;
+        margin-top: 30px;
     `
 
     const HotelTitle = styled.div`
         ${props => props.theme.h3Heading}
+    `
+    const HotelLinkWrapper = styled.div`
+        margin-top: 5px;
     `
 
     const HotelLink = styled.a`
@@ -189,7 +190,9 @@ export default () => {
                                     <HotelTitle>{name}</HotelTitle>
                                     <div>{address}</div>
                                     <div>{description}</div>
-                                    <HotelLink href={url}>Book</HotelLink>
+                                    <HotelLinkWrapper>
+                                        <HotelLink href={url}>Book</HotelLink>
+                                    </HotelLinkWrapper>
                                 </Hotel>
                             )
                         })}
