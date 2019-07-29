@@ -51,3 +51,13 @@ p {
     width: 80%;
     color: #fef2e9;
 }
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #f3793b;
+}
+
+a:hover {
+    text-decoration: underline;
+}
