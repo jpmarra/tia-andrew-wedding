@@ -46,29 +46,36 @@ export default () => {
         margin-top: 30px;
     `
 
-    const HotelList = styled.div`
-        width: 100%;
+    const Button = styled.a`
+        ${props => props.theme.h3Heading}
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
+        width: 210px;
+        height: 45px;
+        margin-top: 30px;
+        cursor: pointer;
+        color: ${props => props.theme.maroon};
+        background-color: ${props => props.theme.cream};
+        border: 1px solid ${props => props.theme.maroon};
 
-        @media (max-width: 920px) {
-            flex-direction: column;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            color: ${props => props.theme.orange};
+            border: 1px solid ${props => props.theme.orange};
         }
     `
 
-    const Hotel = styled.div`
-        margin-top: 30px;
-    `
-
-    const HotelTitle = styled.div`
-        ${props => props.theme.h3Heading}
-    `
-    const HotelLinkWrapper = styled.div`
+    const ButtonText = styled.div`
         margin-top: 5px;
     `
 
-    const HotelLink = styled.a`
+    const Link = styled.a`
         text-decoration: none;
+        cursor: pointer;
         color: ${props => props.theme.orange};
 
         &:hover {
@@ -81,12 +88,12 @@ export default () => {
             <ContentBlock isTitle>
                 <PageTitle
                     dangerouslySetInnerHTML={{
-                        __html: dictionary.accommodationsTitleHTML,
+                        __html: dictionary.thingsToDoTitleHTML,
                     }}
                 />
                 <PageHeader
                     dangerouslySetInnerHTML={{
-                        __html: dictionary.accommodationsHeaderHTML,
+                        __html: dictionary.thingsToDoHeaderHTML,
                     }}
                 />
             </ContentBlock>
@@ -94,78 +101,67 @@ export default () => {
                 <ContentBlock>
                     <SectionTitle
                         dangerouslySetInnerHTML={{
-                            __html: dictionary.gettingAroundSectionTitleHTML,
+                            __html: dictionary.enjoyTitleHTML,
                         }}
                     />
                     <SectionBlurb
                         dangerouslySetInnerHTML={{
-                            __html: dictionary.travelBlurbHTML,
+                            __html: dictionary.enjoyBlurbHTML,
                         }}
                     />
+                    <Button
+                        target="_blank"
+                        href={dictionary.viewMapButton.link}
+                    >
+                        <ButtonText>
+                            {dictionary.viewMapButton.buttonText}
+                        </ButtonText>
+                    </Button>
                     <ItemTitle
                         dangerouslySetInnerHTML={{
-                            __html: dictionary.airportTitleHTML,
+                            __html: dictionary.societyHillTitleHTML,
                         }}
                     />
                     <div
                         dangerouslySetInnerHTML={{
-                            __html: dictionary.airportBlurbHTML,
+                            __html: dictionary.societyHillBlurbHTML,
                         }}
                     />
+                    <Link
+                        target="_blank"
+                        href={dictionary.societyHillLink.link}
+                    >
+                        {dictionary.societyHillLink.buttonText}
+                    </Link>
                     <ItemTitle
                         dangerouslySetInnerHTML={{
-                            __html: dictionary.parkingTitleHTML,
+                            __html: dictionary.oldCityTitleHTML,
                         }}
                     />
                     <div
                         dangerouslySetInnerHTML={{
-                            __html: dictionary.gettingAroundBlurbHTML,
+                            __html: dictionary.oldCityBlurbHTML,
                         }}
                     />
-                </ContentBlock>
-                <ContentBlock>
-                    <SectionTitle
-                        dangerouslySetInnerHTML={{
-                            __html: dictionary.staySectionTitleHTML,
-                        }}
-                    />
-                    <SectionBlurb
-                        dangerouslySetInnerHTML={{
-                            __html: dictionary.stayBlurbHTML,
-                        }}
-                    />
-                    <HotelList>
-                        {dictionary.hotels.map(hotel => {
-                            const {
-                                name,
-                                address,
-                                description,
-                                url,
-                            } = hotel.node
-
-                            return (
-                                <Hotel>
-                                    <HotelTitle>{name}</HotelTitle>
-                                    <div>{address}</div>
-                                    <div>{description}</div>
-                                    <HotelLinkWrapper>
-                                        <HotelLink href={url}>Book</HotelLink>
-                                    </HotelLinkWrapper>
-                                </Hotel>
-                            )
-                        })}
-                    </HotelList>
-
+                    <Link
+                        target="_blank"
+                        href={dictionary.queenVillageLink.link}
+                    >
+                        {dictionary.queenVillageLink.buttonText}
+                    </Link>
                     <ItemTitle
                         dangerouslySetInnerHTML={{
-                            __html: dictionary.airbnbTitleHTML,
+                            __html: dictionary.fishtownTitleHTML,
                         }}
                     />
                     <div
                         dangerouslySetInnerHTML={{
-                            __html: dictionary.airbnbBlurbHTML,
+                            __html: dictionary.fishtownBlurbHTML,
                         }}
                     />
+                    <Link target="_blank" href={dictionary.fishtownLink.link}>
+                        {dictionary.fishtownLink.buttonText}
+                    </Link>
                 </ContentBlock>
             </SectionWrapper>
         </>

@@ -49,6 +49,12 @@ const query = graphql`
                 }
             }
 
+            parkingTitle {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
             enjoyBlurb {
                 childMarkdownRemark {
                     html
@@ -217,6 +223,24 @@ const query = graphql`
                 }
             }
 
+            afterPartyLocation {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            afterPartyAddress {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            afterPartyAddressLine2 {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
             scheduleDate {
                 childMarkdownRemark {
                     html
@@ -248,6 +272,18 @@ const query = graphql`
             }
 
             faqTitle {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            thingsToDoTitle {
+                childMarkdownRemark {
+                    html
+                }
+            }
+
+            thingsToDoHeader {
                 childMarkdownRemark {
                     html
                 }
@@ -341,6 +377,10 @@ export default ({ children }) => (
                 gettingAroundBlurbHTML: get(
                     data,
                     'contentfulDictionary.gettingAroundBlurb.childMarkdownRemark.html'
+                ),
+                parkingTitleHTML: get(
+                    data,
+                    'contentfulDictionary.parkingTitle.childMarkdownRemark.html'
                 ),
                 airportBlurbHTML: get(
                     data,
@@ -454,6 +494,18 @@ export default ({ children }) => (
                     data,
                     'contentfulDictionary.venueAddressLine2.childMarkdownRemark.html'
                 ),
+                afterPartyAddressLine1HTML: get(
+                    data,
+                    'contentfulDictionary.afterPartyAddress.childMarkdownRemark.html'
+                ),
+                afterPartyAddressLine2HTML: get(
+                    data,
+                    'contentfulDictionary.afterPartyAddressLine2.childMarkdownRemark.html'
+                ),
+                afterPartyLocationHTML: get(
+                    data,
+                    'contentfulDictionary.afterPartyLocation.childMarkdownRemark.html'
+                ),
                 scheduleDateHTML: get(
                     data,
                     'contentfulDictionary.scheduleDate.childMarkdownRemark.html'
@@ -478,6 +530,14 @@ export default ({ children }) => (
                     data,
                     'contentfulDictionary.faqTitle.childMarkdownRemark.html'
                 ),
+                thingsToDoTitleHTML: get(
+                    data,
+                    'contentfulDictionary.thingsToDoTitle.childMarkdownRemark.html'
+                ),
+                thingsToDoHeaderHTML: get(
+                    data,
+                    'contentfulDictionary.thingsToDoHeader.childMarkdownRemark.html'
+                ),
                 hotels: get(data, 'allContentfulHotel.edges'),
                 questions: get(data, 'allContentfulQuestion.edges'),
                 buttons: get(data, 'allContentfulLinkButton.nodes'),
@@ -492,6 +552,15 @@ export default ({ children }) => (
                 ),
                 viewMapButton: data.allContentfulLinkButton.nodes.find(
                     button => button.buttonNumber === 4
+                ),
+                fishtownLink: data.allContentfulLinkButton.nodes.find(
+                    button => button.buttonNumber === 5
+                ),
+                societyHillLink: data.allContentfulLinkButton.nodes.find(
+                    button => button.buttonNumber === 6
+                ),
+                queenVillageLink: data.allContentfulLinkButton.nodes.find(
+                    button => button.buttonNumber === 7
                 ),
             }
             return (

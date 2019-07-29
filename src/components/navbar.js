@@ -91,25 +91,31 @@ const NavBar = ({ color, hoverColor, location }) => {
                 </NavLink>
             </LinkWrapper>
             <LinkWrapper
-                isSelected={location && location.pathname === '/accommodations'}
+                isSelected={location && location.pathname === '/travel'}
             >
                 <NavLink
-                    isSelected={
-                        location && location.pathname === '/accommodations'
-                    }
-                    to="/accommodations"
+                    isSelected={location && location.pathname === '/travel'}
+                    to="/travel"
                 >
-                    Accommodations
+                    Travel
                 </NavLink>
             </LinkWrapper>
             <LinkWrapper
-                isSelected={location && location.pathname === '/details'}
+                isSelected={location && location.pathname === '/thingstodo'}
             >
                 <NavLink
-                    isSelected={location && location.pathname === '/details'}
-                    to="/details"
+                    isSelected={location && location.pathname === '/thingstodo'}
+                    to="/thingstodo"
                 >
-                    Details
+                    Things To Do
+                </NavLink>
+            </LinkWrapper>
+            <LinkWrapper isSelected={location && location.pathname === '/faqs'}>
+                <NavLink
+                    isSelected={location && location.pathname === '/faqs'}
+                    to="/faqs"
+                >
+                    FAQs
                 </NavLink>
             </LinkWrapper>
             <NavItem target="_blank" href={dictionary.rsvpButton.link}>

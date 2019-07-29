@@ -67,9 +67,7 @@ const Footer = () => {
                 dangerouslySetInnerHTML={{ __html: dictionary.footerTextHTML }}
             />
             <Credits>
-                Website design by{' '}
-                <a href="http://www.andrewmcqustion.com">A. Mcquiston</a>.
-                &nbsp;Development by{' '}
+                Website design by A. McQuiston. Development by{' '}
                 <a href="http://www.jpmarra.com">JP Marra</a>.
             </Credits>
         </Wrapper>

@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 import Container from '../components/container'
 import Header from '../components/header'
 import Footer from '../components/footer'
-import StoryContent from '../components/storycontent'
+import ThingsToDoContent from '../components/thingstodocontent'
 
 export default ({ location }) => {
     const Wrapper = styled.div`
@@ -20,7 +20,7 @@ export default ({ location }) => {
             <Header location={location} />
             <Wrapper>
                 <Container class="center">
-                    <StoryContent />
+                    <ThingsToDoContent />
                 </Container>
             </Wrapper>
             <Footer />

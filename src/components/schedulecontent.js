@@ -142,18 +142,18 @@ export default () => {
                 />
                 <ItemTitle
                     dangerouslySetInnerHTML={{
-                        __html: dictionary.scheduleDateHTML,
+                        __html: dictionary.afterPartyLocationHTML,
                     }}
                 />
                 <div
                     dangerouslySetInnerHTML={{
-                        __html: dictionary.venueAddressLine1HTML,
+                        __html: dictionary.afterPartyAddressLine1HTML,
                     }}
                 />
                 <div
                     style={{ marginBottom: '20px' }}
                     dangerouslySetInnerHTML={{
-                        __html: dictionary.venueAddressLine2HTML,
+                        __html: dictionary.afterPartyAddressLine2HTML,
                     }}
                 />
                 <ItemTitle
