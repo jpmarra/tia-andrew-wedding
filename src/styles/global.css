@@ -57,7 +57,3 @@ a {
     cursor: pointer;
     color: #f3793b;
 }
-
-a:hover {
-    text-decoration: underline;
-}
