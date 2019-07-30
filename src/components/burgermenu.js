@@ -85,10 +85,10 @@ export default props => {
                             Schedule
                         </NavLink>
                         <NavLink
-                            to="/details"
+                            to="/faqs"
                             onClick={() => props.setIsOpen(false)}
                         >
-                            Details
+                            FAQs
                         </NavLink>
                         <NavLink
                             to="/travel"
