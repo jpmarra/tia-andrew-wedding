@@ -91,10 +91,16 @@ export default props => {
                             Details
                         </NavLink>
                         <NavLink
-                            to="/accommodations"
+                            to="/travel"
                             onClick={() => props.setIsOpen(false)}
                         >
-                            Accommodations
+                            Travel
+                        </NavLink>
+                        <NavLink
+                            to="/thingstodo"
+                            onClick={() => props.setIsOpen(false)}
+                        >
+                            Things To Do
                         </NavLink>
                         <NavItem
                             target="_blank"
