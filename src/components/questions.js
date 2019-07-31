@@ -13,6 +13,10 @@ const questions = () => {
         width: 75%;
         border-top: 1px solid;
         border-color: ${props => props.theme.maroon};
+
+        @media (max-width: 920px) {
+            width: 100%;
+        }
     `
 
     return (
