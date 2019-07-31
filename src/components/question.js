@@ -21,6 +21,10 @@ const questionComponent = ({ question, answer, isOpen = false }) => {
         .answer {
             padding-top: 10px;
             width: 70%;
+
+            @media (max-width: 920px) {
+                width: 100%;
+            }
         }
 
         .expand {
