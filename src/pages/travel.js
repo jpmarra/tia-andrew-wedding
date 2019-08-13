@@ -10,7 +10,6 @@ import Footer from '../components/footer'
 export default ({ location }) => {
     const Wrapper = styled.div`
         width: 100%;
-        height: 100vh;
         min-height: max-content;
         display: flex;
         justify-content: center;

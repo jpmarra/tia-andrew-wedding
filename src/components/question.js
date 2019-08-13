@@ -23,11 +23,12 @@ const questionComponent = ({ question, answer, isOpen = false }) => {
             width: 70%;
 
             @media (max-width: 920px) {
-                width: 100%;
+                width: 85%;
             }
         }
 
         .expand {
+            display: flex;
             cursor: pointer;
             border: none;
             background: none;
