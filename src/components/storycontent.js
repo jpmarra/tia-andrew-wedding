@@ -11,7 +11,7 @@ const query = graphql`
     query photoQuery {
         allFile(
             filter: {
-                extension: { regex: "/(jpg)|(jpeg)/" }
+                extension: { regex: "/png/" }
                 relativeDirectory: { eq: "storyPhotos" }
             }
         ) {
