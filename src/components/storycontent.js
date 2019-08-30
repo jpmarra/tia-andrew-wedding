@@ -42,7 +42,6 @@ export default () => (
             }
 
             images.sort((a, b) => (getImageName(a) > getImageName(b) ? 1 : -1))
-            console.log(images)
 
             const PageTitle = styled.div`
                 ${props => props.theme.h2Heading}
